@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="WEB_MODULE" version="4">
+  <component name="NewModuleRootManager">
+    <content url="file://$MODULE_DIR$" />
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="module-library">
+      <library name="PHARS">
+        <CLASSES>
+          <root url="phar://C:/Users/olivier.kouame/Desktop/Workspace/ben/wp-content/plugins/property-finder/vendor/nategood/httpful/downloads/httpful-0.1.0.phar" />
+          <root url="phar://C:/Users/olivier.kouame/Desktop/Workspace/ben/wp-content/plugins/property-finder/vendor/nategood/httpful/downloads/httpful.phar" />
+          <root url="phar://C:/Users/olivier.kouame/Desktop/Workspace/ben/wp-content/plugins/property-finder/composer.phar" />
+          <root url="phar://C:/Users/olivier.kouame/Desktop/Workspace/ben/wp-content/plugins/property-finder/vendor/nategood/httpful/downloads/httpful-0.1.4.phar" />
+          <root url="phar://C:/Users/olivier.kouame/Desktop/Workspace/ben/wp-content/plugins/property-finder/vendor/nategood/httpful/downloads/httpful-0.1.6.phar" />
+          <root url="phar://C:/Users/olivier.kouame/Desktop/Workspace/ben/wp-content/plugins/property-finder/vendor/nategood/httpful/downloads/httpful-0.1.2.phar" />
+          <root url="phar://C:/Users/olivier.kouame/Desktop/Workspace/ben/wp-content/plugins/property-finder/vendor/nategood/httpful/downloads/httpful-0.1.5.phar" />
+        </CLASSES>
+        <SOURCES>
+          <root url="phar://C:/Users/olivier.kouame/Desktop/Workspace/ben/wp-content/plugins/property-finder/vendor/nategood/httpful/downloads/httpful-0.1.0.phar" />
+          <root url="phar://C:/Users/olivier.kouame/Desktop/Workspace/ben/wp-content/plugins/property-finder/vendor/nategood/httpful/downloads/httpful.phar" />
+          <root url="phar://C:/Users/olivier.kouame/Desktop/Workspace/ben/wp-content/plugins/property-finder/composer.phar" />
+          <root url="phar://C:/Users/olivier.kouame/Desktop/Workspace/ben/wp-content/plugins/property-finder/vendor/nategood/httpful/downloads/httpful-0.1.4.phar" />
+          <root url="phar://C:/Users/olivier.kouame/Desktop/Workspace/ben/wp-content/plugins/property-finder/vendor/nategood/httpful/downloads/httpful-0.1.6.phar" />
+          <root url="phar://C:/Users/olivier.kouame/Desktop/Workspace/ben/wp-content/plugins/property-finder/vendor/nategood/httpful/downloads/httpful-0.1.2.phar" />
+          <root url="phar://C:/Users/olivier.kouame/Desktop/Workspace/ben/wp-content/plugins/property-finder/vendor/nategood/httpful/downloads/httpful-0.1.5.phar" />
+        </SOURCES>
+      </library>
+    </orderEntry>
+  </component>
+</module>
+

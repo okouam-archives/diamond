@@ -1,0 +1,6 @@
+{
+    "require": {
+        "nategood/httpful": "*",
+        "monolog/monolog": "1.0.*"
+    }
+}

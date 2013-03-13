@@ -10,20 +10,20 @@
 		Within our team we have a wealth of experience to call upon to ensure our
 		clients receive the assistance they need every step of the way.
 		</p>
-		
-		<a class="grey-btn lrg-btn noise btn">Read More</a>
+
+            <a class="grey-btn lrg-btn noise btn" href="<?php echo get_option('home'); ?>/about-diamond-residential/" title="Read more about Diamond Residential">Read More</a>
 		</article>
 		
 		<article class="grid-5 last"><img class="home-img" src="<?php bloginfo('template_directory'); ?>/_/img/diamond-residential-london-shop-front.jpg" /></article>
 	</section>
 	
-	<section class="wrap main">
+	<section class="wrap main home-boxes"">
 	
 		<article class="grid-half white-box">
 
             <?php $properties = getLatestBuyProperties(); ?>
 
-			<h2><a href="#">Latest Properties for sale</a></h2>
+            <h2>Featured properties for sale</h2>
 			
 			<article class="grid-half">
 			 <a href="/index.php/property?id=<?php echo $properties[0]->id ?>" class="content"><img style="width: 228px; height: 173px" src="<?php echo $properties[0]->images[0] ?>"</a>
@@ -46,7 +46,7 @@
 
             <?php $properties = getLatestRentProperties(); ?>
 
-			<h2><a href="#">Latest Properties for rent</a></h2>
+            <h2>Featured properties for rent</h2>
 			
 			<article class="grid-half">
 			 <a href="/index.php/property?id=<?php echo $properties[0]->id ?>" class="content"><img style="width: 228px; height: 173px" src="<?php echo $properties[0]->images[0] ?>" /></a>
@@ -74,7 +74,7 @@
 			senectus et netus.
 			</p>
 			
-			<a class="sml-btn btn pink-btn" href="#">Register as rental applicant</a>
+			<a class="sml-btn btn pink-btn" href="<?php echo get_option('home'); ?>/register-with-us/register-as-rental-applicant/" title="Register with us as a rental applicant">Register as rental applicant</a>
 		</article>
 		<article class="grid-one-third">
 			<h2>Register as sales applicant</h2>
@@ -83,7 +83,7 @@
 			senectus et netus.
 			</p>
 			
-			<a class="sml-btn btn pink-btn" href="#">Register as sales applicant</a>
+			<a class="sml-btn btn pink-btn" href="<?php echo get_option('home'); ?>/register-with-us/register-as-sales-applicant/" title="Register with us as a sales applicant">Register as sales applicant</a>
 		</article>
 		<article class="grid-one-third last">
 			<h2>Free valuation for Landlord</h2>

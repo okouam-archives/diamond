@@ -1,4 +1,5 @@
 <?php
+    require_once(dirname(__FILE__) . '/src/ChromePHP.php');
 	require_once(dirname(__FILE__) . '/src/Search.php');
 	require_once(dirname(__FILE__) . '/src/SearchResult.php');
 	require_once(dirname(__FILE__) . '/src/Query.php');

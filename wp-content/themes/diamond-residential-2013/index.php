@@ -1,12 +1,5 @@
 <?php get_header(); ?>
 
-<?php
-
-    $context = new Context(null, "E1D57034-6C07-44C4-A458-425CAE9D9247", 1322, uniqid(), -1, 2104);
-    $finder = new PropertyFinder();
-
-?>
-
 	<section class="wrap main content">
 		<article class="grid-7">
 		<h2 class="primary">Welcome to Diamond Residential</h2>
@@ -28,12 +21,7 @@
 	
 		<article class="grid-half white-box">
 
-            <?php
-
-            $query = new Query(new PriceRange(0, 1000000000), 0, SearchType::Sales, null, true);
-            $results = $finder->search($context, $query, 1, 2);
-            $properties = $results->properties;
-            ?>
+            <?php $properties = getLatestBuyProperties(); ?>
 
 			<h2><a href="#">Latest Properties for sale</a></h2>
 			
@@ -56,12 +44,7 @@
 		
 		<article class="grid-half white-box last">
 
-            <?php
-
-                $query = new Query(new PriceRange(0, 1000000000), 0, SearchType::Lettings, null, true);
-                $results = $finder->search($context, $query, 1, 2);
-                $properties = $results->properties;
-            ?>
+            <?php $properties = getLatestRentProperties(); ?>
 
 			<h2><a href="#">Latest Properties for rent</a></h2>
 			

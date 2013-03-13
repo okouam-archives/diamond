@@ -2,7 +2,7 @@
 
     $context = new Context(null, "E1D57034-6C07-44C4-A458-425CAE9D9247", 1322, uniqid(), -1, 2104);
     $finder = new PropertyFinder();
-    $property = $finder->fetch($context, $_GET["id"]);
+    $property = getProperty($_GET["id"]); $finder->fetch($context, $_GET["id"]);
     $slices = array_chunk($property->features, count($property->features) / 2);
     get_header();
 ?>
@@ -86,10 +86,10 @@
 	<li class="field-wrap">
 		<label for="tube" class="inline-label">Tube stations</label>
 		<div class="switch">
-				<input id="tube-on" name="tube" type="radio" checked>
+				<input id="tube-on" name="tube" value="on" type="radio" >
 				<label for="tube-on" onclick="">On</label>
 		
-				<input id="tube-off" name="tube" type="radio">	
+				<input id="tube-off" name="tube" value="off" type="radio" checked>
 				<label for="tube-off" onclick="">Off</label>
 				
 				<span class="slide-button"></span>
@@ -99,10 +99,10 @@
 		<li class="field-wrap">
 			<label for="schools" class="inline-label">Schools</label>
 			<div class="switch">
-					<input id="schools-on" name="schools" type="radio" checked>
+					<input id="schools-on" name="schools" value="on" type="radio" >
 					<label for="schools-on" onclick="">On</label>
 			
-					<input id="schools-off" name="schools" type="radio">	
+					<input id="schools-off" name="schools" value="off" type="radio" checked>
 					<label for="schools-off" onclick="">Off</label>
 					
 					<span class="slide-button"></span>
@@ -133,16 +133,13 @@
                 mapTypeId: google.maps.MapTypeId.ROADMAP
             };
             var map = new google.maps.Map(document.getElementById("property-map"), mapProp);
-            var bounds = new google.maps.LatLngBounds();
-             var marker = new google.maps.Marker({
+            var marker = new google.maps.Marker({
                 position: coordinates,
                 map: map,
-                title: "property"
+                title: "property",
+                 icon: "<?php echo plugins_url('/assets/img/marker-house.png'); ?>"
             });
-            google.maps.event.addListener(marker, 'click', function() {
-                var url = window.location.href;
-                window.location = $.param.querystring(url, {id: <?php echo $property->id; ?>});
-            });
+            setupMapOverlays(map);
         }
         google.maps.event.addDomListener(window, 'load', initialize);
     </script>

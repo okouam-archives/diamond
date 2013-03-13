@@ -1,22 +1,5 @@
 <?php 
 
-    function getPageNumber($params) {
-        return isset($params['page']) ? $params['page'] : 1;
-    }
-
-	function getPageSize($params) {
-        return isset($params['per_page']) ? $params['per_page'] : 5;
-    }
-
-    function search() {
-        $context = new Context(null, "E1D57034-6C07-44C4-A458-425CAE9D9247", 1322, uniqid(), -1, 2104);
-        $page = getPageNumber($_GET);
-        $perPage = getPageSize($_GET);
-        $finder = new PropertyFinder();
-        $query = $finder->getQuery($_GET);
-        return $finder->search($context, $query, $page, $perPage);
-    }
-
     $results = search();
     get_header();
 ?>
@@ -71,56 +54,42 @@
 		
 		<article class="grid-half last">
 		
-		<h2>Map View</h2>
-		
-		<form>
-		<ul class="nav form-fields clearfix">
-		
-		<li class="field-wrap">
-			<label for="tube" class="inline-label">Tube stations</label>
-			<div class="switch">
-					<input id="tube-on" name="tube" value="on" type="radio" checked>
-					<label for="tube-on" onclick="">On</label>
-			
-					<input id="tube-off" name="tube" value="off" type="radio">
-					<label for="tube-off" onclick="">Off</label>
-					
-					<span class="slide-button"></span>
-			</div>
-		</li>
-		
-			<li class="field-wrap">
-				<label for="schools" class="inline-label">Schools</label>
-				<div class="switch">
-						<input id="schools-on" name="schools" type="radio" checked>
-						<label for="schools-on" onclick="">On</label>
-				
-						<input id="schools-off" name="schools" type="radio">	
-						<label for="schools-off" onclick="">Off</label>
-						
-						<span class="slide-button"></span>
-				</div>
-			</li>
-			
-			</ul>
-		</form>
-		
-		<div id="results-map" class="map"></div>
+            <h2>Map View</h2>
 
+            <form>
+                <ul class="nav form-fields clearfix">
+                    <li class="field-wrap">
+                        <label for="tube" class="inline-label">Tube stations</label>
+                        <div class="switch">
+                            <input id="tube-on" name="tube" value="on" type="radio" >
+                            <label for="tube-on" onclick="">On</label>
+                            <input id="tube-off" name="tube" value="off" type="radio" checked>
+                            <label for="tube-off" onclick="">Off</label>
+                            <span class="slide-button"></span>
+                        </div>
+                    </li>
+                    <li class="field-wrap">
+                        <label for="schools" class="inline-label">Schools</label>
+                        <div class="switch">
+                            <input id="schools-on" name="schools" value="on" type="radio" >
+                            <label for="schools-on" onclick="">On</label>
+                            <input id="schools-off" name="schools" value="off" type="radio" checked>
+                            <label for="schools-off" onclick="">Off</label>
+                            <span class="slide-button"></span>
+                        </div>
+                    </li>
+                </ul>
+            </form>
+
+            <div id="results-map" class="map"></div>
 		
 		</article>	
 			
 	</section>
 	
 	<section class="wrap main">
-	
-	<div class="grid-12 last">
-
-        <div id="paginator" style="margin-bottom: 20px">sdfgdsf</div>
-	</div>
-			
+	    <div class="grid-12 last"><div id="paginator" style="margin-bottom: 20px"></div></div>
 	</section>
-
 
     <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?key=AIzaSyDY0kkJiTPVd2U7aTOAwhc9ySH6oHxOIYM&sensor=false"></script>
     <script type="text/javascript" src="https://raw.github.com/okouam/jquery-bbq/master/jquery.ba-bbq.min.js"></script>
@@ -147,11 +116,11 @@
                         var marker = new google.maps.Marker({
                             position: coordinates,
                             map: map,
-                            title: item.displayAddress
+                            title: item.displayAddress,
+                            icon: "<?php echo plugins_url('/assets/img/marker-house.png'); ?>"
                         });
                         google.maps.event.addListener(marker, 'click', function() {
-                            var url = window.location.href;
-                            window.location = $.param.querystring(url, {id: item.id});
+                            window.location = "/index.php/property?id=" + item.id;
                         });
                     }
                 });
@@ -171,36 +140,9 @@
 
                $("#paginator").pagination(pagination);
 
-               function qs(key) {
-                   key = key.replace(/[*+?^$.\[\]{}()|\\\/]/g, "\\$&"); // escape RegEx meta chars
-                   var match = location.search.match(new RegExp("[?&]"+key+"=([^&]+)(&|$)"));
-                   return match && decodeURIComponent(match[1].replace(/\+/g, " "));
-               }
-
                var ordering = qs("sort");
 
-               var tubeLayer = new google.maps.FusionTablesLayer({
-                   query: {
-                       select: 'Name',
-                       from: '1cSgCdnxhgtMIlRQ75_4SEt_1r3dmRU7Eg6TC6xI'
-                   }
-               });
-
-               var tubeSelector = $("input[name='tube']");
-               tubeSelector.change(function() {
-                   console.debug($(this).val());
-                    if ($(this).val() == "on") {
-                        tubeLayer.setMap(map);
-                    } else {
-                        tubeLayer.setMap(null);
-                        console.alert("");
-                    }
-               });
-
-               var schoolsSelector = $("input[name='schools']");
-               schoolsSelector.change(function() {
-                   console.debug("schools");
-               });
+               setupMapOverlays(map);
 
                var sorter = $("#filter-results");
 
@@ -209,13 +151,9 @@
                sorter.change(function() {
                    var url = window.location.href;
                    window.location = $.param.querystring(url, {sort: $(this).val(), page: 1});
-               })
-
-               $("")
+               });
            })
 
     </script>
-
-
 
 <?php get_footer(); ?>

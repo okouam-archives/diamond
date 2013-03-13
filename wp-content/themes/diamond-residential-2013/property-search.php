@@ -1,95 +1,84 @@
 <?php
 
-$min_buy_prices = array(
-    "0" => "£0.00",
-    "100000" => "£100,000",
-    "200000" => "£200,000",
-    "300000" => "£300,000",
-    "400000" => "£400,000",
-    "500000" => "£500,000",
-    "600000" => "£600,000",
-    "700000" => "£700,000",
-    "800000" => "£800,000",
-    "900000" => "£900,000",
-    "1000000" => "£1,000,000"
-);
+    $min_buy_prices = array(
+        "0" => "£0.00",
+        "100000" => "£100,000",
+        "200000" => "£200,000",
+        "300000" => "£300,000",
+        "400000" => "£400,000",
+        "500000" => "£500,000",
+        "600000" => "£600,000",
+        "700000" => "£700,000",
+        "800000" => "£800,000",
+        "900000" => "£900,000",
+        "1000000" => "£1,000,000"
+    );
 
-$postcodes = array(
-    "any" => "Any",
-    "W1" => "W1"
-);
+    $postcodes = array(
+        "any" => "Any",
+        "W1" => "W1"
+    );
 
-$property_types = array(
-    "any" => "Any",
-    "flat" => "Flat",
-    "house" => "House"
-);
+    $property_types = array(
+        "any" => "Any",
+        "flat" => "Flat",
+        "house" => "House"
+    );
 
-$min_beds = array(
-    "0" => "Studio",
-    "1" => "1",
-    "2" => "2",
-    "3" => "3",
-    "4" => "4",
-    "5" => "5",
-);
+    $min_beds = array(
+        "0" => "Studio",
+        "1" => "1",
+        "2" => "2",
+        "3" => "3",
+        "4" => "4",
+        "5" => "5",
+    );
 
-$max_buy_prices = array(
-    "0" => "£0.00",
-    "100000" => "£100,000",
-    "200000" => "£200,000",
-    "300000" => "£300,000",
-    "400000" => "£400,000",
-    "500000" => "£500,000",
-    "600000" => "£600,000",
-    "700000" => "£700,000",
-    "800000" => "£800,000",
-    "900000" => "£900,000",
-    "1000000" => "£1,000,000"
-);
+    $max_buy_prices = array(
+        "0" => "£0.00",
+        "100000" => "£100,000",
+        "200000" => "£200,000",
+        "300000" => "£300,000",
+        "400000" => "£400,000",
+        "500000" => "£500,000",
+        "600000" => "£600,000",
+        "700000" => "£700,000",
+        "800000" => "£800,000",
+        "900000" => "£900,000",
+        "1000000" => "£1,000,000"
+    );
 
-$min_rent_prices = array(
-    "0" => "£0.00",
-    "100" => "£100 pw",
-    "200" => "£200 pw",
-    "300" => "£300 pw",
-    "400" => "£400 pw",
-    "500" => "£500 pw",
-    "600" => "£600 pw",
-    "700" => "£700 pw",
-    "800" => "£800 pw",
-    "900" => "£900 pw",
-    "1000" => "£1,000 pw",
-    "1500" => "£1,500 pw",
-    "2000" => "£2,000 pw"
-);
+    $min_rent_prices = array(
+        "0" => "£0.00",
+        "100" => "£100 pw",
+        "200" => "£200 pw",
+        "300" => "£300 pw",
+        "400" => "£400 pw",
+        "500" => "£500 pw",
+        "600" => "£600 pw",
+        "700" => "£700 pw",
+        "800" => "£800 pw",
+        "900" => "£900 pw",
+        "1000" => "£1,000 pw",
+        "1500" => "£1,500 pw",
+        "2000" => "£2,000 pw"
+    );
 
-$max_rent_prices = array(
-    "0" => "£0.00",
-    "100" => "£100 pw",
-    "200" => "£200 pw",
-    "300" => "£300 pw",
-    "400" => "£400 pw",
-    "500" => "£500 pw",
-    "600" => "£600 pw",
-    "700" => "£700 pw",
-    "800" => "£800 pw",
-    "900" => "£900 pw",
-    "1000" => "£1,000 pw",
-    "1500" => "£1,500 pw",
-    "2000" => "£2,000 pw"
-);
-
-function write_options($options, $name) {
-    foreach($options as $key => $value) {
-        write_option($name, $key, $value);
-    }
-}
-
-function write_option($prop, $key, $value) {
-    $selected = isset($_GET[$prop]) && $_GET[$prop] == $key ? "selected" : "";
-    echo "<option {$selected} value='{$key}'>{$value}</option>";
-}
+    $max_rent_prices = array(
+        "0" => "£0.00",
+        "100" => "£100 pw",
+        "200" => "£200 pw",
+        "300" => "£300 pw",
+        "400" => "£400 pw",
+        "500" => "£500 pw",
+        "600" => "£600 pw",
+        "700" => "£700 pw",
+        "800" => "£800 pw",
+        "900" => "£900 pw",
+        "1000" => "£1,000 pw",
+        "1500" => "£1,500 pw",
+        "2000" => "£2,000 pw"
+    );
 
 ?>
 
@@ -152,12 +141,6 @@ function write_option($prop, $key, $value) {
 
     <script type="text/javascript">
 
-        function qs(key) {
-            key = key.replace(/[*+?^$.\[\]{}()|\\\/]/g, "\\$&"); // escape RegEx meta chars
-            var match = location.search.match(new RegExp("[?&]"+key+"=([^&]+)(&|$)"));
-            return match && decodeURIComponent(match[1].replace(/\+/g, " "));
-        }
-
         function restoreSelection() {
             var old_max_price = qs('max-price');
             var old_min_price = qs('min-price');
@@ -168,8 +151,6 @@ function write_option($prop, $key, $value) {
         function setupPricing(rentOrBuy) {
             var max_prices = [], min_prices = [];
 
-            console.debug(rentOrBuy);
-
             if (rentOrBuy == "rent") {
                 max_prices = <?php echo json_encode($max_rent_prices) ?>;
                 min_prices = <?php echo json_encode($min_rent_prices) ?>;
@@ -178,42 +159,42 @@ function write_option($prop, $key, $value) {
                 min_prices = <?php echo json_encode($min_buy_prices) ?>;
             }
 
-            $max_price_el = $("#max-price").empty();
-            $min_price_el = $("#min-price").empty();
+            var $max_price_el = $("#max-price").empty();
+            var $min_price_el = $("#min-price").empty();
 
             $.each(max_prices, function(key, value) {
-                $("#max-price").append("<option value='" + key + "'>" + value + "</option>")
+                $max_price_el.append("<option value='" + key + "'>" + value + "</option>")
             });
 
             $.each(min_prices, function(key, value) {
-                $("#min-price").append("<option value='" + key + "'>" + value + "</option>")
+                $min_price_el.append("<option value='" + key + "'>" + value + "</option>")
             });
 
             $("#buy-min .customSelectInner").text("£0.00");
-            $("#max-price").val(0);
-            $("#buy-max .customSelectInner").text("£0.00");
-            $("#min-price").val(0);
+            $max_price_el.val(0);
+            $('#buy-max .customSelectInner').text("£0.00");
+            $min_price_el.val(0);
         }
-
-        var $switcher = $('.switch input');
-
-        var switcherChoice = qs("buy-rent");
 
         $(function() {
-            $switcher.change(function() {
+            var switcher = $('.switch input');
+
+            var switcherChoice = qs("buy-rent");
+
+            switcher.change(function() {
                 setupPricing($(this).val());
             })
+
+            if (switcherChoice) {
+                if (switcherChoice == "rent") $("#rent").click();
+                else $("#buy").click();
+            } else {
+                switcherChoice = "buy";
+            }
+
+            setupPricing(switcherChoice);
+            restoreSelection();
         });
-
-        if (switcherChoice) {
-            if (switcherChoice == "rent") $("#rent").click();
-            else $("#buy").click();
-        } else {
-            switcherChoice = "buy";
-        }
-
-        setupPricing(switcherChoice);
-        restoreSelection();
 
     </script>
 

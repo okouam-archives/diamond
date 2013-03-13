@@ -8,17 +8,15 @@
 		function __construct($context)
 		{
 			$this->context = $context;
-		}	
+		}
 
 		function fetch($id) 
 		{
 			if ($id == null)
-				throw new Exception("A property ID must be provided");		
+				throw new Exception("A property ID must be provided");
 
 			$uri = "http://www.dezrez.com/DRApp/DotNetSites/WebEngine/property/Property.aspx";
  			$url = "$uri?{$this->context->toQueryString()}&pid=$id";
-
-            //throw new Exception($url);
 
  			$this->context->info("Fetching a property from DezRez using the uri $url.");
 
@@ -35,7 +33,7 @@
 			$letting = new Letting($root, true);
 			return $letting;
 		}
-		
+
 		function execute($query, $page, $perPage) 
 		{			
 			if ($query == null)
@@ -64,7 +62,6 @@
 		function parseMultiple($content) 
 		{
 			$root = null;
-			$lettings = array();
 			if ($this->type == SearchType::Lettings) {
 				$root = $content->propertySearchLettings;
 			} else {

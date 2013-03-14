@@ -125,7 +125,7 @@ table {border-collapse: collapse; border-spacing: 0;}
 
 *{margin: 0; padding: 0; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box;-o-box-sizing: border-box; box-sizing: border-box; }
 
-body {font: 16px Helmet, Freesans, sans-serif; color: #3b3535; background: #ece8ea; -webkit-font-smoothing: antialiased;
+body {font: 16px Helmet, Freesans, sans-serif; color: #3b3535;  background: #ece8ea url('_/img/bg-city_.jpg') no-repeat center bottom; -webkit-font-smoothing: antialiased;
 }
 
 body, select, input, textarea {color: #333;}
@@ -146,7 +146,7 @@ a img:active{ opacity: .7; }
 ::-moz-selection{background: #e62088; color: #fff; text-shadow: none;}
 ::selection {background: #e62088; color: #fff; text-shadow: none;} 
 
-a:link {-webkit-tap-highlight-color: #fcd700;} 
+a:link {-webkit-tap-highlight-color: #e62088;} 
 
 ins {background-color: #fcd700; color: #000; text-decoration: none;}
 mark {background-color: #fcd700; color: #000; font-style: italic; font-weight: bold;}
@@ -156,7 +156,7 @@ mark {background-color: #fcd700; color: #000; font-style: italic; font-weight: b
 .brand-font-secondary{ font-family: Helmet, Freesans, sans-serif; }
 
 /* == type == */
-.btn,h1,h2,h3,h4,.parent-sub{font-family: "futura-pt",sans-serif;  }
+.btn,h1,h2,h3,h4,.parent-sub,.schools-tube .inline-label{font-family: "futura-pt",sans-serif;  }
 h1,h2,h3,h4{  letter-spacing: -1px; }
 h2,h3,h4{  font-weight: 500; }
 h1,.primary{ font-size: 2.438em; margin-bottom: .5em;   font-weight: 500;}
@@ -191,7 +191,7 @@ p.large-txt{ font-size: 1em; line-height: 1.6; }
 
 /* == grid == */
 
-.wrap { width: 100%; max-width: 1100px;padding: 0 20px 10px;margin: 0 auto; list-style: none;   }
+.wrap { width: 100%; max-width: 1100px; min-width: 1100px; padding: 0 20px 10px;margin: 0 auto; list-style: none;   }
 
 .wrap [class*="grid-"] {display: inline-block; margin: 0 2.7% 0 0; vertical-align: top;letter-spacing: 0; position: relative;  }
 
@@ -317,8 +317,24 @@ box-shadow:  0px 0px 1px 0px #fefefe;
 -moz-border-radius: 5px;
 border-radius: 5px; }
 
-
-
+.schools-tube .inline-label { display: inline-block; padding-top: 10px; padding-left: 55px; color: #e62088; font-weight: 500; font-size: 1.2em; text-align: right;
+min-width: 20%;
+}
+.schools-tube .inline-label .sprite{ font-size: .0001em; color: #ece8ea; }
+.schools-tube .field-wrap{ width: 100%; min-width: 30%;  max-width: 30%;margin-right: 2.25%; position: relative;z-index: 1; margin-bottom: -10px; }
+.schools-tube .switch{ display: inline-block; width: 50%; float: right; margin-right: 6px; margin-top: 3px; }
+.schools-tube .field-wrap:before{ 
+    border: 1px solid #D3D0D0;
+    border-radius: 2px 2px 2px 2px;
+    box-shadow: 0 0 1px 1px #EEECEC inset;
+    content: " ";
+    display: block;
+    height: 2.55em;
+    min-width: 53%;
+    position: absolute;
+    top:0;
+    right: 0;
+    }
 
 /* == main == */
 .main .primary{ margin-top: .475em; }
@@ -357,7 +373,8 @@ border-radius: 5px; }
 .property-share > li > a{ padding: 1em 0 1em 1em; }
 .property-share .sprite{ margin-right: .45em; }
 .property-share.white-box{ padding: 0; }
-
+.property-share li.missing{opacity: 0.5;  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)"; pointer-events: none;}
+.property-share li.missing a,.property-share li.missing a:hover{ color: #444; cursor: default; }
 
 /* == SIDEBAR == */
 #sidebar{ margin: 2em 0 0; }
@@ -576,7 +593,7 @@ box-shadow: 0px 1px 4px 0px #d6c9b7,0 -1px 2px #9c9c9c; }
 	
 	.switch .slide-button{ display: none; }
 	.switch { position: relative; padding: 0; width: 100%; }
-	.switch input { position: absolute; opacity: 0; }
+	.switch input { position: absolute; opacity: 0; visibility: hidden; }
 	.switch label { position: relative; z-index: 2; float: left; width: 50%; height: 100%; margin: 0; text-align: left; padding-left: 7px; }
 	.switch .slide-button { position: absolute; top: 0; left: 0; padding: 0; z-index: 1; width: 50%; height: 100%; }
 	.switch input:last-of-type:checked ~ .slide-button { left: 50%; }
@@ -638,6 +655,8 @@ box-shadow: 0px 1px 4px 0px #d6c9b7,0 -1px 2px #9c9c9c; }
 	.floorplan{ background-position:-11px -200px; min-width: 21px; min-height: 22px;  position: relative; }
 	.epc{ background-position: -10px -230px; min-width: 20px; min-height: 21px;  position: relative; }
 	.print{ background-position:  -12px -262px; min-width: 19px; min-height: 21px;  position: relative; }
+	.tube{background-position:  -53px -11px; min-width: 36px; min-height: 29px; position: absolute; top: 5px; left: 0;}
+	.schools{background-position:  -56px -55px; min-width: 36px; min-height: 29px; position: absolute; top: 5px; left: 0;}
 	/* sprite for retina */
 	@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2) {
 	    .sprite { background-image: url('_/img/sprite@2x.png'); }
@@ -894,7 +913,7 @@ box-shadow: 0px 0px 1px 1px #978b87; }
    
 ========================================================================== */
    
-@media screen and (max-width: 767px) {
+/*@media screen and (max-width: 767px) {
   .wrap {
     margin: 0;
     width: auto;
@@ -931,15 +950,32 @@ box-shadow: 0px 0px 1px 1px #978b87; }
   
   
 }
+*/
 
 
 
+/* INTERNET EXPLORER */
 
+.ie9 .switch .slide-button{top: -35px;}
 
-
-
-
-
+.ie8 .wrap { width: 100%; max-width: 1100px; min-width: 960px; padding: 0 20px 10px;margin: 0 auto; list-style: none;   }
+.ie8 #footer { color: #FFFFFF; min-height: 50px; max-height:  50px; padding-top: 0px; margin-top: 20px;}
+.ie8 .btn{ font-weight: bold; }
+.ie8 .prop-finder{ max-height: 11em; }
+.ie8 .prop-finder li{margin-right: 0;}
+.ie8 .prop-finder li.field-wrap{ max-width: 12%; margin-right: 2.25%; position: relative;z-index: 1; }
+.ie8  .switch .slide-button{ display: inline; }
+.ie8  .switch { position: relative; padding: 0; width: 100%; }
+.ie8  .switch input { position: relative; visibility: visible;  float: none;  display: inline;}
+.ie8  .switch label { position: relative; z-index: 2; float: none; display: inline; max-width: 30%; height: 100%; margin: 0; text-align: left; padding-left: 7px; }
+.ie8  .switch .slide-button { position: absolute; top: 0; left: 0; padding: 0; z-index: 1; width: 50%; height: 100%; }
+.ie8  .switch input:last-of-type:checked ~ .slide-button { left: 50%; }
+.ie8  .switch #rent,.ie8  .switch #buy{ margin-left: 7px; }
+.ie8 .switch {  height: 35px; }
+.ie8 .switch .slide-button{ display: none;}
+.ie8 .schools-tube{
+	display: none;
+}
 
 
 

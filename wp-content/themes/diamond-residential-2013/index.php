@@ -11,7 +11,7 @@
 		clients receive the assistance they need every step of the way.
 		</p>
 
-            <a class="grey-btn lrg-btn noise btn" href="<?php echo get_option('home'); ?>/about-diamond-residential/" title="Read more about Diamond Residential">Read More</a>
+            <a class="grey-btn lrg-btn noise btn" href="<?= get_option('home'); ?>/about-diamond-residential/" title="Read more about Diamond Residential">Read More</a>
 		</article>
 		
 		<article class="grid-5 last"><img class="home-img" src="<?php bloginfo('template_directory'); ?>/_/img/diamond-residential-london-shop-front.jpg" /></article>
@@ -26,18 +26,18 @@
             <h2>Featured properties for sale</h2>
 			
 			<article class="grid-half">
-			 <a href="/index.php/property?id=<?php echo $properties[0]->id ?>" class="content"><img style="width: 228px; height: 173px" src="<?php echo $properties[0]->images[0] ?>"</a>
-			  <h3><a href="/index.php/property?id=<?php echo $properties[0]->id ?>"><?php echo $properties[0]->displayAddress ?></a></h3>
-			  <p class="content"><?php echo $properties[0]->price ?></p>
-			  <p class="content"><?php echo $properties[0]->bedrooms ?> Bedrooms</p>
+			 <a href="/index.php/property?id=<?= $properties[0]->id ?>" class="content"><img style="width: 228px; height: 173px" src="<?= $properties[0]->images[0] ?>"</a>
+			  <h3><a href="/index.php/property?id=<?= $properties[0]->id ?>"><?= $properties[0]->displayAddress ?></a></h3>
+			  <p class="content"><?= $properties[0]->price ?></p>
+			  <p class="content"><?= format_bedrooms($properties[0]->bedrooms) ?></p>
 			  
 			</article>
 			
 			<article class="grid-half last">
-			  <a href="/index.php/property?id=<?php echo $properties[1]->id ?>" class="content"><img style="width: 228px; height: 173px" src="<?php echo $properties[1]->images[0] ?>"</a>
-			  <h3><a href="/index.php/property?id=<?php echo $properties[1]->id ?>"><?php echo $properties[1]->displayAddress ?></a></h3>
-			  <p class="content"><?php echo $properties[1]->price ?></p>
-			  <p class="content"><?php echo $properties[1]->bedrooms ?> Bedrooms</p>
+			  <a href="/index.php/property?id=<?= $properties[1]->id ?>" class="content"><img style="width: 228px; height: 173px" src="<?= $properties[1]->images[0] ?>"</a>
+			  <h3><a href="/index.php/property?id=<?= $properties[1]->id ?>"><?php echo $properties[1]->displayAddress ?></a></h3>
+			  <p class="content"><?= $properties[1]->price ?></p>
+			  <p class="content"><?= format_bedrooms($properties[1]->bedrooms) ?></p>
 			</article>
 		
 		</article>
@@ -49,17 +49,17 @@
             <h2>Featured properties for rent</h2>
 			
 			<article class="grid-half">
-			 <a href="/index.php/property?id=<?php echo $properties[0]->id ?>" class="content"><img style="width: 228px; height: 173px" src="<?php echo $properties[0]->images[0] ?>" /></a>
-			  <h3><a href="/index.php/property?id=<?php echo $properties[0]->id ?>"><?php echo $properties[0]->displayAddress ?></a></h3>
-			  <p class="content"><?php echo $properties[0]->price ?></p>
-			  <p class="content"><?php echo $properties[0]->bedrooms ?> Bedrooms</p>
+			 <a href="/index.php/property?id=<?= $properties[0]->id ?>" class="content"><img style="width: 228px; height: 173px" src="<?= $properties[0]->images[0] ?>" /></a>
+			  <h3><a href="/index.php/property?id=<?= $properties[0]->id ?>"><?= $properties[0]->displayAddress ?></a></h3>
+			  <p class="content"><?= $properties[0]->price ?></p>
+			  <p class="content"><?= format_bedrooms($properties[0]->bedrooms) ?></p>
 			</article>
 			
 			<article class="grid-half last">
-			  <a href="/index.php/property?id=<?php echo $properties[1]->id ?>" class="content"><img style="width: 228px; height: 173px" src="<?php echo $properties[1]->images[0] ?>" /></a>
-			  <h3><a href="/index.php/property?id=<?php echo $properties[1]->id ?>"><?php echo $properties[1]->displayAddress ?></a></h3>
-			  <p class="content"><?php echo $properties[1]->price ?></p>
-			  <p class="content"><?php echo $properties[1]->bedrooms ?> Bedrooms</p>
+			  <a href="/index.php/property?id=<?= $properties[1]->id ?>" class="content"><img style="width: 228px; height: 173px" src="<?= $properties[1]->images[0] ?>" /></a>
+			  <h3><a href="/index.php/property?id=<?= $properties[1]->id ?>"><?= $properties[1]->displayAddress ?></a></h3>
+			  <p class="content"><?= $properties[1]->price ?></p>
+			  <p class="content"><?= format_bedrooms($properties[1]->bedrooms) ?></p>
 			</article>
 		
 		</article>
@@ -74,7 +74,7 @@
 			senectus et netus.
 			</p>
 			
-			<a class="sml-btn btn pink-btn" href="<?php echo get_option('home'); ?>/register-with-us/register-as-rental-applicant/" title="Register with us as a rental applicant">Register as rental applicant</a>
+			<a class="sml-btn btn pink-btn" href="<?= get_option('home'); ?>/register-with-us/register-as-rental-applicant/" title="Register with us as a rental applicant">Register as rental applicant</a>
 		</article>
 		<article class="grid-one-third">
 			<h2>Register as sales applicant</h2>
@@ -83,7 +83,7 @@
 			senectus et netus.
 			</p>
 			
-			<a class="sml-btn btn pink-btn" href="<?php echo get_option('home'); ?>/register-with-us/register-as-sales-applicant/" title="Register with us as a sales applicant">Register as sales applicant</a>
+			<a class="sml-btn btn pink-btn" href="<?= get_option('home'); ?>/register-with-us/register-as-sales-applicant/" title="Register with us as a sales applicant">Register as sales applicant</a>
 		</article>
 		<article class="grid-one-third last">
 			<h2>Free valuation for Landlord</h2>

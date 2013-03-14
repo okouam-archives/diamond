@@ -30,7 +30,8 @@
 		function parseSingle($content) 
 		{
 			$root = $content->propertyFullDetails->property;
-			$letting = new Letting($root, true);
+            $rentalperiod = $root['rentalperiod'] == SearchType::Sales ? SearchType::Sales : SearchType::Lettings;
+			$letting = new Letting($root, true, $rentalperiod);
 			return $letting;
 		}
 
@@ -50,11 +51,11 @@
 
  			$this->context->info("Making a search request to DezRez using the uri $url.");
 
- 			$this->type = $query->type;
+ 			$this->type = $query->buyOrRent;
 
-			$response = \Httpful\Request::get($url)  
-			    			->expectsXml()           
-			    			->send();                  
+			$response = \Httpful\Request::get($url)
+			    			->expectsXml()
+			    			->send();
 
 			return $this->parseMultiple($response->body); 
 		}

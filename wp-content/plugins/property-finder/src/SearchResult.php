@@ -17,6 +17,4 @@
 			$this->pageCount = (int) $pageCount;
 		}
 	}
-
-
 ?>

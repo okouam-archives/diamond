@@ -32,31 +32,37 @@ function qs(key) {
     return match && decodeURIComponent(match[1].replace(/\+/g, " "));
 }
 
-function setupMapOverlays(map) {
-    setupTubeOverlay(map);
-    setupSchoolsOverlay(map);
-}
+function setupSchoolsOverlay(map, schools, icon) {
+    var markers = [];
+    for(var i = 0; i < schools.length; i++) {
+        var school = schools[i];
+        var coordinates = new google.maps.LatLng(school.latitude, school.longitude);
+        var marker = new google.maps.Marker({
+            position: coordinates,
+            icon: icon,
+            title: school.name
+        });
+        markers.push(marker);
+    }
 
-function setupSchoolsOverlay(map) {
-    var layer = new google.maps.FusionTablesLayer({
-        query: {
-            select: 'EstablishmentName',
-            from: '1nzc6Ismj8WlHLlgo5zNUgf4EV-4A5qzqu4kS2G4'
-        },
-        styles: [{
-            markerOptions: {
-                iconName: 'schools'
+    $("input[name='schools']").change(function() {
+        if ($(this).val() == "on") {
+            for(var i = 0; i < markers.length; i++) {
+                markers[i].setMap(map);
             }
-        }]
+        } else {
+            for(var i = 0; i < markers.length; i++) {
+                markers[i].setMap(null);
+            }
+        }
     });
-    setupOverlay($("input[name='schools']"), layer, map);
 }
 
 function setupTubeOverlay(map) {
-    setupOverlay($("input[name='tube']"), new google.maps.TransitLayer(), map)
+    toggleTubeOverlay($("input[name='tube']"), new google.maps.TransitLayer(), map)
 }
 
-function setupOverlay(selector, layer, map) {
+function toggleTubeOverlay(selector, layer, map) {
     selector.change(function() {
         if ($(this).val() == "on") {
             layer.setMap(map);

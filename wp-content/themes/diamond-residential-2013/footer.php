@@ -21,20 +21,15 @@
 </section>
 		</footer>
 
-	
-
 	<?php wp_footer(); ?>
 
-
-<!-- here comes the javascript -->
-
-
-
 <!-- this is where we put our custom functions -->
-<script>window.jQuery || document.write('<script src="<?php bloginfo('template_directory'); ?>/_/js/jquery.min.js"><\/script>')</script>
-<script src="<?php bloginfo('template_directory'); ?>/_/js/jquery.customSelect.min.js"></script>
-<script src="<?php bloginfo('template_directory'); ?>/_/js/jquery.flexslider-min.js"></script>
-<script src="<?php bloginfo('template_directory'); ?>/_/js/functions.js"></script>
+<script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?key=AIzaSyDY0kkJiTPVd2U7aTOAwhc9ySH6oHxOIYM&sensor=false"></script>
+<script type="text/javascript" src="https://raw.github.com/okouam/jquery-bbq/master/jquery.ba-bbq.min.js"></script>
+<script type="text/javascript" src="<?php bloginfo('template_directory'); ?>/_/js/jquery.simplePagination.js"></script>
+<script type="text/javascript" src="<?php bloginfo('template_directory'); ?>/_/js/jquery.customSelect.min.js"></script>
+<script type="text/javascript" src="<?php bloginfo('template_directory'); ?>/_/js/jquery.flexslider-min.js"></script>
+<script type="text/javascript" src="<?php bloginfo('template_directory'); ?>/_/js/functions.js"></script>
 
 <!-- Asynchronous google analytics; this is the official snippet.
 	 Replace UA-XXXXXX-XX with your site's ID and uncomment to enable.

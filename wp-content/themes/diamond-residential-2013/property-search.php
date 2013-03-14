@@ -16,13 +16,43 @@
 
     $postcodes = array(
         "any" => "Any",
-        "W1" => "W1"
+        "WC" => "WC",
+        "W1" => "W1",
+        "W2" => "W2",
+        "W6" => "W6",
+        "W8" => "W8",
+        "W9" => "W9",
+        "W10" => "W10",
+        "W11" => "W11",
+        "W14" => "W14",
+        "NW1" => "NW1",
+        "NW2" => "NW2",
+        "NW3" => "NW3",
+        "NW4" => "NW4",
+        "NW5" => "NW5",
+        "NW6" => "NW6",
+        "NW8" => "NW8",
+        "NW10" => "NW10",
+        "NW11" => "NW11",
+        "N1" => "N1",
+        "N7" => "N7",
+        "EC" => "EC",
+        "SE1" => "SE1",
+        "SW1" => "SW1"
     );
 
     $property_types = array(
         "any" => "Any",
-        "flat" => "Flat",
-        "house" => "House"
+        "0" => "Flats",
+        "1" => "Houses",
+        "4" => "Apartment",
+        "5" => "Town House",
+        "6" => "Bungalow",
+        "7" => "Chalet",
+        "8" => "Cottage",
+        "9" => "Semi Detached",
+        "10" => "Detached",
+        "11" => "Terraced"
     );
 
     $min_beds = array(
@@ -84,7 +114,7 @@
 
 <div class="grid-12">
     <h2>Find your property</h2>
-    <form method="get" action="/index.php/search-results">
+    <form method="get" action="/index.php/results">
         <ul class="nav form-fields clearfix">
 
             <li class="field-wrap">
@@ -142,6 +172,8 @@
     <script type="text/javascript">
 
         function restoreSelection() {
+            var old_prop_type = qs('prop-type');
+            if (old_prop_type) $("#prop-type").val(old_prop_type);
             var old_max_price = qs('max-price');
             var old_min_price = qs('min-price');
             if (old_max_price) $("#max-price").val(old_max_price);
@@ -152,11 +184,11 @@
             var max_prices = [], min_prices = [];
 
             if (rentOrBuy == "rent") {
-                max_prices = <?php echo json_encode($max_rent_prices) ?>;
-                min_prices = <?php echo json_encode($min_rent_prices) ?>;
+                max_prices = <?= json_encode($max_rent_prices) ?>;
+                min_prices = <?= json_encode($min_rent_prices) ?>;
             } else {
-                max_prices = <?php echo json_encode($max_buy_prices) ?>;
-                min_prices = <?php echo json_encode($min_buy_prices) ?>;
+                max_prices = <?= json_encode($max_buy_prices) ?>;
+                min_prices = <?= json_encode($min_buy_prices) ?>;
             }
 
             var $max_price_el = $("#max-price").empty();

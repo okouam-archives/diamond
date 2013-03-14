@@ -48,20 +48,15 @@
     }
 
     function getPageNumber($params) {
-        return isset($params['page']) ? $params['page'] : 1;
-    }
-
-    function getPageSize($params) {
-        return isset($params['per_page']) ? $params['per_page'] : 5;
+        return isset($params['pos']) ? $params['pos'] : 1;
     }
 
     function search() {
         $context = new Context(null, "E1D57034-6C07-44C4-A458-425CAE9D9247", 1322, uniqid(), -1, 2104);
         $page = getPageNumber($_GET);
-        $perPage = getPageSize($_GET);
         $finder = new PropertyFinder();
         $query = $finder->getQuery($_GET);
-        return $finder->search($context, $query, $page, $perPage);
+        return $finder->search($context, $query, $page, 5);
     }
 
     function write_options($options, $name) {
@@ -81,4 +76,20 @@
         return $finder->fetch($context, $id);
     }
 
+    function format_bedrooms($num_bedrooms) {
+        if ($num_bedrooms == 0) return "Studio";
+        else if ($num_bedrooms == 1) return "1 Bedroom";
+        else return "$num_bedrooms Bedrooms";
+    }
+
+    function find_surrounding_schools($property, &$schools) {
+        $fusionTablequery = new FusionTableQuery("AIzaSyBgYhtGiRjsDIb_jaQjM3ZQHHVWCK9uNDI");
+        $stmt = "SELECT latitude, longitude, EstablishmentName ";
+        $stmt .= "FROM 1nzc6Ismj8WlHLlgo5zNUgf4EV-4A5qzqu4kS2G4 ";
+        $stmt .= "ORDER BY ST_DISTANCE(latitude,LATLNG({$property->latitude},{$property->longitude})) LIMIT 20";
+        $data = $fusionTablequery->query($stmt);
+        foreach($data->rows as $row) {
+            array_push($schools, new School($row[2], $row[0], $row[1]));
+        }
+    }
 ?>

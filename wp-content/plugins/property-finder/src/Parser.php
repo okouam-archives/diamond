@@ -11,16 +11,16 @@
 
 		function process($xml, $propertyType)
 		{
-			$lettings = array();
+            $properties = array();
 			$imageManager = new ImageManager($this->context);
-            			foreach ($xml->properties->property as $attributes) {
-				$letting = new Letting($attributes, false, $propertyType);
-				array_push($letting->images, $imageManager->getDefaultImageUrl($letting->id, 300));
-				array_push($lettings, $letting);	
+            foreach ($xml->properties->property as $attributes) {
+                $property = new PropertySummary($attributes, $propertyType);
+                $property->image = $imageManager->getDefaultImageUrl($property->id, 300);
+				array_push($properties, $property);
 			}	
-			$numLettings = count($lettings);
-			$this->context->info("Parsed $numLettings properties.");
-			return $lettings;
+			$numProperties = count($properties);
+			$this->context->info("Parsed $numProperties properties.");
+			return $properties;
 		}
 	}
 	

@@ -10,14 +10,6 @@
 		public $bedrooms;
 		public $bathrooms;
 		public $images;
-		public $priceVal;
-		public $street_address_1;
-		public $street_address_2;
-		public $town;
-		public $city;
-		public $county;
-		public $postcode;
-		public $country;
 		public $displayAddress;
 		public $hasImages;
 		public $description;
@@ -28,19 +20,29 @@
 		public $gardens;
 		public $parkingSpaces;
 		public $otherRooms;
+        public $floorplans;
+        public $epc_chart;
         public $features = array();
 
-		function __construct($el, $isExtended = false, $propertyType) {
+		function __construct($el, $propertyType) {
 			$this->id = (int) $el["id"];
 			$this->longitude = (string) $el["longitude"];
 			$this->latitude = (string) $el["latitude"];
 			$this->isFeatured = (bool) $el["featured"];
-            if ($propertyType == SearchType::Lettings) {
-                $this->price = "£" . (number_format(round(((((double) $el["priceVal"]) * 12) / 52)))) . " pw";
-            } else {
+            $rentalperiod = $el['rentalperiod'];
+            if ($rentalperiod == 0 or $rentalperiod == 1) {
                 $this->price = (string) $el["price"];
+            } else if ($rentalperiod == 2)  {
+                $this->price = "£" . (number_format(round((((double) $el["priceVal"]) * 7 * 52)))) . " pw";
+            } else if ($rentalperiod == 3)  {
+                $this->price = "£" . (number_format((double) $el["priceVal"])) . " pw";
+            } else if ($rentalperiod == 4)  {
+                $this->price = "£" . (number_format(round(((((double) $el["priceVal"]) * 12) / 52)))) . " pw";
+            } else if ($rentalperiod == 5)  {
+                $this->price = "£" . (number_format(round(((((double) $el["priceVal"]) * 4) / 52)))) . " pw";
+            } else if ($rentalperiod == 6)  {
+                $this->price = "£" . (number_format(round((((double) $el["priceVal"]) / 52)))) . " pw";
             }
-			$this->priceVal = (float) $el["priceVal"];
 			$this->bedrooms = (int) $el["bedrooms"];
 			$this->bathrooms = (int) $el["bathrooms"];
 			$this->receptions = (string) $el['receptions'];
@@ -50,43 +52,37 @@
 			$this->otherRooms = (string) $el['otherrooms'];
 			$this->parkingSpaces = (string) $el['parkingSpaces'];
 			$this->images = array();
-			if ($isExtended) {
-				foreach($el->media->picture as $image) {
-					array_push($this->images, (string) $image);	
-				}
-				$this->street_address_1 = (string) $el->address->sa1;
-				$this->street_address_2 = (string) $el->address->sa2;
-				$this->town = (string) $el->address->town;
-				$this->city = (string) $el->address->city;
-				$this->county = (string) $el->address->county;
-				$this->postcode = (string) $el->address->postcode;
-				$this->country = (string) $el->address->country;
-				$this->displayAddress = (string) $el->address->useAddress;
-				$this->description = "";
-                foreach($el->text->description as $text) {
-                    if ($text->attributes->summary) {
-                        $this->summary = (string) $text;
-                    } else {
-                        $this->description = $this->description . (string) $text;
+
+            foreach($el->media->picture as $image) {
+                if ($image['category'] == 'primary' || $image['category'] == 'secondary') {
+                    array_push($this->images, (string) $image);
+                } else if ($image['category'] == 'floorplan') {
+                    $this->floorplans = (string) $image;
+                }
+            }
+            if ($el->homeinformationpack) {
+                if ($el->homeinformationpack->info) {
+                    if ($el->homeinformationpack->info->hip) {
+                        $this->epc_chart = (string) $el->homeinformationpack->info->hip;
                     }
                 }
-                $area = $el->text->areas->area;
-                foreach($area->feature as $feature) {
-                    array_push($this->features, (string) $feature->heading);
+            }
+            $this->displayAddress = (string) $el->address->useAddress;
+            $this->description = "";
+
+            foreach($el->text->description as $text) {
+                if ($text->attributes->summary) {
+                    $this->summary = (string) $text;
+                } else {
+                    $this->description = $this->description . (string) $text;
                 }
-			} else {
-				$this->hasImages = (bool) $el['picture'];
-				$this->description = (string) $el->summaryDescription;
-                $this->summary = (string) $el->summaryDescription;
-				$this->street_address_1 = (string) $el->sa1;
-				$this->street_address_2 = (string) $el->sa2;
-				$this->town = (string) $el->town;
-				$this->city = (string) $el->city;
-				$this->county = (string) $el->county;
-				$this->postcode = (string) $el->postcode;
-				$this->country = (string) $el->country;
-				$this->displayAddress = (string) $el->useAddress;
-			}
+            }
+
+            $area = $el->text->areas->area;
+
+            foreach($area->feature as $feature) {
+                array_push($this->features, (string) $feature->heading);
+            }
 		}
 
 		function asCategory($propertyType) {

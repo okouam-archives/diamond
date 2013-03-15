@@ -71,37 +71,27 @@
 	<meta name="DC.title" content="Project Name">
 	<meta name="DC.subject" content="What you're about.">
 	<meta name="DC.creator" content="Who made this site.">
-	
-	<!--  Mobile Viewport meta tag
-	j.mp/mobileviewport & davidbcalhoun.com/2010/viewport-metatag 
-	device-width : Occupy full width of the screen in its current orientation
-	initial-scale = 1.0 retains dimensions instead of zooming out if page height > device height
-	maximum-scale = 1.0 retains dimensions instead of zooming in if page width < device width -->
-	<!-- Uncomment to use; use thoughtfully!
-	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
-	-->
-	
-	<link rel="shortcut icon" href="<?php bloginfo('template_directory'); ?>/_/img/favicon.ico">
-	<!-- This is the traditional favicon.
-		 - size: 16x16 or 32x32
-		 - transparency is OK
-		 - see wikipedia for info on browser support: http://mky.be/favicon/ -->
-		 
-	<link rel="apple-touch-icon" href="<?php bloginfo('template_directory'); ?>/_/img/apple-touch-icon.png">
-	<!-- The is the icon for iOS's Web Clip.
-		 - size: 57x57 for older iPhones, 72x72 for iPads, 114x114 for iPhone4's retina display (IMHO, just go ahead and use the biggest one)
-		 - To prevent iOS from applying its styles to the icon name it thusly: apple-touch-icon-precomposed.png
-		 - Transparency is not recommended (iOS will put a black BG behind the icon) -->
-	
-	<!-- CSS: screen, mobile & print are all in the same file -->
+
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="<?php bloginfo('template_directory'); ?>/_/img/apple-touch-icon.png" />
+    <link rel="apple-touch-icon" sizes="57x57" href="<?php bloginfo('template_directory'); ?>/_/img/apple-touch-icon-57x57.png" />
+    <link rel="apple-touch-icon" sizes="72x72" href="<?php bloginfo('template_directory'); ?>/_/img/apple-touch-icon-72x72.png" />
+    <link rel="apple-touch-icon" sizes="114x114" href="<?php bloginfo('template_directory'); ?>/_/img/apple-touch-icon-114x114.png" />
+    <link rel="apple-touch-icon" sizes="144x144" href="<?php bloginfo('template_directory'); ?>/_/img/apple-touch-icon-144x144.png" />
+
 	<link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>">
-	
 	<!-- all our JS is at the bottom of the page, except for Modernizr. -->
 	<script src="<?php bloginfo('template_directory'); ?>/_/js/modernizr-1.7.min.js"></script>
 	<script type="text/javascript" src="//use.typekit.net/kpq6drv.js"></script>
 	<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-	<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
+    <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?key=AIzaSyDY0kkJiTPVd2U7aTOAwhc9ySH6oHxOIYM&sensor=false"></script>
+    <script type="text/javascript" src="https://raw.github.com/okouam/jquery-bbq/master/jquery.ba-bbq.min.js"></script>
+    <script type="text/javascript" src="<?php bloginfo('template_directory'); ?>/_/js/jquery.simplePagination.js"></script>
+    <script type="text/javascript" src="<?php bloginfo('template_directory'); ?>/_/js/jquery.customSelect.min.js"></script>
+    <script type="text/javascript" src="<?php bloginfo('template_directory'); ?>/_/js/jquery.flexslider-min.js"></script>
+    <script type="text/javascript" src="<?php bloginfo('template_directory'); ?>/_/js/functions.js"></script>
+    <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
 
 	<?php if ( is_singular() ) wp_enqueue_script( 'comment-reply' ); ?>
 

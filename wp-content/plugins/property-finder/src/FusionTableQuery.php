@@ -4,9 +4,11 @@ class School {
     public $latitude;
     public $longitude;
     public $name;
+    public $category;
 
-    public function __construct($name, $latitude, $longitude) {
+    public function __construct($name, $latitude, $longitude, $category) {
         $this->name = $name;
+        $this->category = $category;
         $this->longitude = $longitude;
         $this->latitude = $latitude;
     }
@@ -33,8 +35,11 @@ class FusionTableQuery {
 
         $results = json_decode(curl_exec($curl));
 
-        if( curl_getinfo($curl, CURLINFO_HTTP_CODE) != 200 )
-            throw new Exception($results);
+        if( curl_getinfo($curl, CURLINFO_HTTP_CODE) != 200 ){
+            var_dump($results);
+            throw new Exception("Whatever");
+        }
+
 
         return $results;
     }

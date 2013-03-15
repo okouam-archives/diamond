@@ -105,66 +105,21 @@
 
     <script type="text/javascript">
 
-       $(function() {
+        $(function() {
 
-           var results = <?= json_encode($results->properties); ?>;
+            var propertyCount = <?= $results->propertyCount; ?>;
+            var schoolIcon = "<?= bloginfo('template_directory') . "/_/img/marker-schools.png" ?>";
+            var currentPage = <?= $results->page; ?>;
+            var properties = <?= json_encode($results->properties); ?>;
+            var propertyIcon = "<?= plugins_url('/assets/img/marker-house.png'); ?>";
+            var schools = <?= json_encode($schools) ?>;
 
-            var mapProp = {
-                center: new google.maps.LatLng(51.508742,-0.120850),
-                minZoom: 10,
-                maxZoom: 18,
-                mapTypeId: google.maps.MapTypeId.ROADMAP
-            };
-            var map = new google.maps.Map(document.getElementById("results-map"), mapProp);
-            var bounds = new google.maps.LatLngBounds();
-            $.each(results, function(i, item) {
-                var longitude = item.longitude;
-                var latitude = item.latitude;
-                var coordinates = new google.maps.LatLng(latitude, longitude);
-                if (longitude != 0 && latitude != 0) {
-                    bounds.extend(coordinates);
-                    var marker = new google.maps.Marker({
-                        position: coordinates,
-                        map: map,
-                        title: item.displayAddress,
-                        icon: "<?= plugins_url('/assets/img/marker-house.png'); ?>"
-                    });
-                    google.maps.event.addListener(marker, 'click', function() {
-                        window.location = "/index.php/property?id=" + item.id;
-                    });
-                }
-            });
-
-            map.fitBounds(bounds);
-
-           var pagination = {
-                items: <?= $results->propertyCount; ?>,
-                itemsOnPage: 5,
-                currentPage: <?= $results->page; ?>,
-                cssStyle: 'dark-theme',
-                onPageClick: function(pageNumber) {
-                    var url = window.location.href;
-                    var target = $.param.querystring(url, {pos: pageNumber});
-                    window.location = $.param.querystring(url, {pos: pageNumber});
-                    return false;
-                }
-            };
-
-           $("#paginator").pagination(pagination);
-
-           var ordering = qs("sort");
-
-           setupTubeOverlay(map);
-           setupSchoolsOverlay(map, <?= json_encode($schools) ?>, "<?= bloginfo('template_directory') . "/_/img/marker-schools.png" ?>");
-
-           var sorter = $("#filter-results");
-
-           if (ordering) sorter.val(ordering);
-
-           sorter.change(function() {
-               var url = window.location.href;
-               window.location = $.param.querystring(url, {sort: $(this).val(), pos: 1});
-           });
+            var infowindow = new google.maps.InfoWindow({content: ""});
+            var map = createMap("results-map");
+            displayProperties(map, properties, infowindow, propertyIcon);
+            setupPagination($("#paginator"), propertyCount, currentPage);
+            setupOverlays(map, infowindow, schoolIcon, schools);
+            setupSorting($("#filter-results"));
        })
 
     </script>

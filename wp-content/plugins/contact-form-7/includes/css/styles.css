@@ -1,0 +1,82 @@
+div.wpcf7 {
+	margin: 0;
+	padding: 0;
+}
+
+div.wpcf7-response-output {
+	margin: 2em 0.5em 1em;
+	padding: 0.2em 1em;
+}
+
+div.wpcf7-mail-sent-ok {
+	background: #e62088; color: #fff;
+padding:.15em 1em;
+font-size:.813em;
+
+}
+
+div.wpcf7-mail-sent-ng {
+	background: #e62088; color: #fff;
+padding:.15em 1em;
+font-size:.813em;
+
+}
+
+div.wpcf7-spam-blocked {
+	background: #e62088; color: #fff;
+padding:.15em 1em;
+font-size:.813em;
+
+}
+
+div.wpcf7-validation-errors {
+	background: #e62088; color: #fff;
+padding:.5em 1.5em;
+font-size:.875em;
+margin-left:9%;
+
+}
+
+span.wpcf7-form-control-wrap {
+	position: relative;
+}
+
+span.wpcf7-not-valid-tip {
+			position: absolute;
+		top: -2px;
+		left: 100%;
+		z-index: 100;
+		 border: none; background: #e62088; color: #fff;
+padding:.15em 1em;
+font-size:.813em;
+width:55%;
+}
+
+
+span.wpcf7-not-valid-tip:after, span.wpcf7-not-valid-tip:before { right: 100%; border: solid transparent; content: " "; height: 0; width: 0; position: absolute; pointer-events: none; } 
+span.wpcf7-not-valid-tip:after { border-color: rgba(230, 32, 136, 0); border-right-color: #e62088; border-width: 10px; top: 50%; margin-top: -10px; } 
+span.wpcf7-not-valid-tip:before { border-color: rgba(245, 240, 240, 0); border-right-color: #f5f0f0; border-width: 11px; top: 50%; margin-top: -11px; }
+
+span.wpcf7-not-valid-tip-no-ajax {
+	color: #f00;
+	font-size: 10pt;
+	display: block;
+}
+
+span.wpcf7-list-item {
+	margin-left: 0.5em;
+}
+
+.wpcf7-display-none {
+	display: none;
+}
+
+div.wpcf7 img.ajax-loader {
+	border: none;
+	vertical-align: middle;
+	margin-left: 4px;
+}
+
+div.wpcf7 .watermark {
+	color: #888;
+}

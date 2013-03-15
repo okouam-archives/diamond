@@ -1,29 +1,41 @@
 <?php get_header(); ?>
 
-	<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-			
-		<article class="post" id="post-<?php the_ID(); ?>">
+<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
-			<h2><?php the_title(); ?></h2>
 
-			<?php include (TEMPLATEPATH . '/_/inc/meta.php' ); ?>
 
-			<div class="entry">
 
-				<?php the_content(); ?>
 
-				<?php wp_link_pages(array('before' => 'Pages: ', 'next_or_number' => 'number')); ?>
 
-			</div>
 
-			<?php edit_post_link('Edit this entry.', '<p>', '</p>'); ?>
+    <section class="wrap main content">
 
-		</article>
-		
-		<?php comments_template(); ?>
+        <article class="grid-9">
 
-		<?php endwhile; endif; ?>
+            <h1><?php the_title(); ?></h1>
 
-<?php get_sidebar(); ?>
+            <?php the_content(); ?>
+
+
+
+        </article>
+
+        <article class="grid-3 last">
+
+            <?php get_sidebar(); ?>
+
+        </article>
+
+    </section>
+
+
+
+
+
+
+
+<?php endwhile; endif; ?>
+
+
 
 <?php get_footer(); ?>

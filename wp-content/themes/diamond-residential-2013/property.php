@@ -15,7 +15,7 @@
 	<hgroup class="wrap head-row">
 		<article class="grid-10">
             <h1 class="property-title">
-                <?= format_bedrooms($property->bedrooms) ?> Flat,
+                <?= format_bedrooms($property->bedrooms) ?>, <?= $property->propertyType ?>,
                 <?= $property->displayAddress ?>
             </h1>
             <h2 class="primary brand-color"><?= $property->price ?></h2>
@@ -28,9 +28,9 @@
 		<article class="grid-half content">
 		
 			<ul class="property-share white-box nav clearfix brand-font">
-				<li><a href="#"><i class="sprite viewing">Viewing:</i> Arrange a viewing</a></li>
-				<li><a href="#"><i class="sprite callback">Callback:</i> Request a callback</a></li>
-				<li><a href="#"><i class="sprite send">Send:</i> Send to a friend</a></li>
+                <li><a href="javascript:arrangeaview()"><i class="sprite viewing">Viewing:</i> Arrange a viewing</a></li>
+                <li><a href="javascript:callback()"><i class="sprite callback">Callback:</i> Request a callback</a></li>
+                <li><a href="javascript:mailpage()"><i class="sprite send">Send:</i> Send to a friend</a></li>
                 <?php if ($property->floorplans) { ?>
 				    <li><a href="<?= $property->floorplans . "&width=800" ?>"><i class="sprite floorplan">Floorplan:</i> View floorplans</a></li>
 				<?php } else { ?>
@@ -96,10 +96,10 @@
 	<h2>Local information and map</h2>
 	
 	<form>
-	<ul class="nav form-fields clearfix">
+	<ul class="nav form-fields schools-tube clearfix">
 	
 	<li class="field-wrap">
-		<label for="tube" class="inline-label">Tube stations</label>
+        <label for="tube" class="inline-label"><i class="sprite tube">-</i> Tube</label>
 		<div class="switch">
 				<input id="tube-on" name="tube" value="on" type="radio" >
 				<label for="tube-on" onclick="">On</label>
@@ -112,7 +112,7 @@
 	</li>
 	
 		<li class="field-wrap">
-			<label for="schools" class="inline-label">Schools</label>
+            <label for="schools" class="inline-label"><i class="sprite schools">-</i> Schools</label>
 			<div class="switch">
 					<input id="schools-on" name="schools" value="on" type="radio" >
 					<label for="schools-on" onclick="">On</label>
@@ -127,8 +127,7 @@
 		</ul>
 	</form>
 
-	<div id="property-map"  class="map">
-	</div>
+	<div id="property-map"  class="map"></div>
 
 	</div>
 			
@@ -149,13 +148,15 @@
                 var marker = new google.maps.Marker({
                     position: coordinates,
                     map: map,
-                    title: "property",
                     icon: "<?= bloginfo('template_directory') . "/_/img/marker-house.png" ?>"
                 });
 
-                setupTubeOverlay(map);
-                setupSchoolsOverlay(map, <?= json_encode($schools) ?>, "<?= bloginfo('template_directory') . '/_/img/marker-schools.png' ?>");
+                var schoolIcon = "<?= bloginfo('template_directory') . "/_/img/marker-schools.png" ?>";
+                var propertyIcon = "<?= bloginfo('template_directory') . "/_/img/marker-house.png"; ?>";
+                var schools = <?= json_encode($schools) ?>;
 
+                var infowindow = new google.maps.InfoWindow({content: ""});
+                setupOverlays(map, infowindow, schoolIcon, schools);
             })
         </script>
     <?php } ?>

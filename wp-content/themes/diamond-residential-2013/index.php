@@ -26,7 +26,7 @@
             <h2>Featured properties for sale</h2>
 			
 			<article class="grid-half">
-			 <a href="/index.php/property?id=<?= $properties[0]->id ?>" class="content"><img style="width: 228px; height: 173px" src="<?= $properties[0]->images[0] ?>"</a>
+			 <a href="/index.php/property?id=<?= $properties[0]->id ?>" class="content"><img style="width: 228px; height: 173px" src="<?= $properties[0]->image ?>"</a>
 			  <h3><a href="/index.php/property?id=<?= $properties[0]->id ?>"><?= $properties[0]->displayAddress ?></a></h3>
 			  <p class="content"><?= $properties[0]->price ?></p>
 			  <p class="content"><?= format_bedrooms($properties[0]->bedrooms) ?></p>
@@ -34,7 +34,7 @@
 			</article>
 			
 			<article class="grid-half last">
-			  <a href="/index.php/property?id=<?= $properties[1]->id ?>" class="content"><img style="width: 228px; height: 173px" src="<?= $properties[1]->images[0] ?>"</a>
+			  <a href="/index.php/property?id=<?= $properties[1]->id ?>" class="content"><img style="width: 228px; height: 173px" src="<?= $properties[1]->image ?>"</a>
 			  <h3><a href="/index.php/property?id=<?= $properties[1]->id ?>"><?php echo $properties[1]->displayAddress ?></a></h3>
 			  <p class="content"><?= $properties[1]->price ?></p>
 			  <p class="content"><?= format_bedrooms($properties[1]->bedrooms) ?></p>
@@ -49,14 +49,14 @@
             <h2>Featured properties for rent</h2>
 			
 			<article class="grid-half">
-			 <a href="/index.php/property?id=<?= $properties[0]->id ?>" class="content"><img style="width: 228px; height: 173px" src="<?= $properties[0]->images[0] ?>" /></a>
+			 <a href="/index.php/property?id=<?= $properties[0]->id ?>" class="content"><img style="width: 228px; height: 173px" src="<?= $properties[0]->image ?>" /></a>
 			  <h3><a href="/index.php/property?id=<?= $properties[0]->id ?>"><?= $properties[0]->displayAddress ?></a></h3>
 			  <p class="content"><?= $properties[0]->price ?></p>
 			  <p class="content"><?= format_bedrooms($properties[0]->bedrooms) ?></p>
 			</article>
 			
 			<article class="grid-half last">
-			  <a href="/index.php/property?id=<?= $properties[1]->id ?>" class="content"><img style="width: 228px; height: 173px" src="<?= $properties[1]->images[0] ?>" /></a>
+			  <a href="/index.php/property?id=<?= $properties[1]->id ?>" class="content"><img style="width: 228px; height: 173px" src="<?= $properties[1]->image ?>" /></a>
 			  <h3><a href="/index.php/property?id=<?= $properties[1]->id ?>"><?= $properties[1]->displayAddress ?></a></h3>
 			  <p class="content"><?= $properties[1]->price ?></p>
 			  <p class="content"><?= format_bedrooms($properties[1]->bedrooms) ?></p>

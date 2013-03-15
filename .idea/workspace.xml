@@ -2,54 +2,40 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2d8aedce-08f6-4d7f-af36-0491bc01d575" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/plugins/property-finder/src/FusionTableQuery.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/plugins/property-finder/src/PropertySummary.php" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/assets/css/simplePagination.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/property-finder/src/PriceRange.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/property-finder/src/PropertyFinderShortcode.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/diamond-residential-2013/_/js/jquery-1.5.1.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/diamond-residential-2013/_/js/jquery.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/diamond-residential-2013/_/js/map.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/diamond-residential-2013/_/js/search.js" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/wp-content/plugins/assets/js/jquery.simplePagination.js" afterPath="$PROJECT_DIR$/wp-content/themes/diamond-residential-2013/_/js/jquery.simplePagination.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/wp-content/plugins/property-finder/src/Letting.php" afterPath="$PROJECT_DIR$/wp-content/plugins/property-finder/src/Property.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/property-finder/src/Parser.php" afterPath="$PROJECT_DIR$/wp-content/plugins/property-finder/src/Parser.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/diamond-residential-2013/_/img/sprite.png" afterPath="$PROJECT_DIR$/wp-content/themes/diamond-residential-2013/_/img/sprite.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/property-finder/src/FusionTableQuery.php" afterPath="$PROJECT_DIR$/wp-content/plugins/property-finder/src/FusionTableQuery.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/property-finder/src/PropertyFinder.php" afterPath="$PROJECT_DIR$/wp-content/plugins/property-finder/src/PropertyFinder.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/property-finder/src/Query.php" afterPath="$PROJECT_DIR$/wp-content/plugins/property-finder/src/Query.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/property-finder/src/Search.php" afterPath="$PROJECT_DIR$/wp-content/plugins/property-finder/src/Search.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/property-finder/src/SearchResult.php" afterPath="$PROJECT_DIR$/wp-content/plugins/property-finder/src/SearchResult.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/diamond-residential-2013/footer.php" afterPath="$PROJECT_DIR$/wp-content/themes/diamond-residential-2013/footer.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/diamond-residential-2013/_/js/functions.js" afterPath="$PROJECT_DIR$/wp-content/themes/diamond-residential-2013/_/js/functions.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/diamond-residential-2013/functions.php" afterPath="$PROJECT_DIR$/wp-content/themes/diamond-residential-2013/functions.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/diamond-residential-2013/header.php" afterPath="$PROJECT_DIR$/wp-content/themes/diamond-residential-2013/header.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/property-finder/includes.php" afterPath="$PROJECT_DIR$/wp-content/plugins/property-finder/includes.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/diamond-residential-2013/index.php" afterPath="$PROJECT_DIR$/wp-content/themes/diamond-residential-2013/index.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/diamond-residential-2013/page.php" afterPath="$PROJECT_DIR$/wp-content/themes/diamond-residential-2013/page.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/diamond-residential-2013/property-results.php" afterPath="$PROJECT_DIR$/wp-content/themes/diamond-residential-2013/property-results.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/diamond-residential-2013/property-search.php" afterPath="$PROJECT_DIR$/wp-content/themes/diamond-residential-2013/property-search.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/diamond-residential-2013/property.php" afterPath="$PROJECT_DIR$/wp-content/themes/diamond-residential-2013/property.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/diamond-residential-2013/style.css" afterPath="$PROJECT_DIR$/wp-content/themes/diamond-residential-2013/style.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="ben.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="2d8aedce-08f6-4d7f-af36-0491bc01d575" time="1363214501282" ignored="false" />
+    <file path="/Dummy.txt" changelist="2d8aedce-08f6-4d7f-af36-0491bc01d575" time="1363371595654" ignored="false" />
     <file path="/property-search.php" changelist="2d8aedce-08f6-4d7f-af36-0491bc01d575" time="1363281876386" ignored="false" />
-    <file path="/functions.php" changelist="2d8aedce-08f6-4d7f-af36-0491bc01d575" time="1363273061328" ignored="false" />
+    <file path="/functions.php" changelist="2d8aedce-08f6-4d7f-af36-0491bc01d575" time="1363371732338" ignored="false" />
     <file path="/index.php" changelist="2d8aedce-08f6-4d7f-af36-0491bc01d575" time="1363256158687" ignored="false" />
-    <file path="/property.php" changelist="2d8aedce-08f6-4d7f-af36-0491bc01d575" time="1363275635781" ignored="false" />
-    <file path="/property-results.php" changelist="2d8aedce-08f6-4d7f-af36-0491bc01d575" time="1363276795217" ignored="false" />
+    <file path="/property.php" changelist="2d8aedce-08f6-4d7f-af36-0491bc01d575" time="1363284665114" ignored="false" />
+    <file path="/property-results.php" changelist="2d8aedce-08f6-4d7f-af36-0491bc01d575" time="1363379027646" ignored="false" />
     <file path="/Letting.php" changelist="2d8aedce-08f6-4d7f-af36-0491bc01d575" time="1363276961315" ignored="false" />
-    <file path="/functions.js" changelist="2d8aedce-08f6-4d7f-af36-0491bc01d575" time="1363267848362" ignored="false" />
+    <file path="/functions.js" changelist="2d8aedce-08f6-4d7f-af36-0491bc01d575" time="1363379066552" ignored="false" />
     <file path="/en2latlon.rb" changelist="2d8aedce-08f6-4d7f-af36-0491bc01d575" time="1363174121492" ignored="false" />
     <file path="/header.php" changelist="2d8aedce-08f6-4d7f-af36-0491bc01d575" time="1363212265275" ignored="false" />
     <file path="/Search.php" changelist="2d8aedce-08f6-4d7f-af36-0491bc01d575" time="1363281693936" ignored="false" />
-    <file path="/FusionTableQuery.php" changelist="2d8aedce-08f6-4d7f-af36-0491bc01d575" time="1363266721207" ignored="false" />
+    <file path="/FusionTableQuery.php" changelist="2d8aedce-08f6-4d7f-af36-0491bc01d575" time="1363372610955" ignored="false" />
     <file path="/Parser.php" changelist="2d8aedce-08f6-4d7f-af36-0491bc01d575" time="1363281559052" ignored="false" />
     <file path="/PropertySummary.php" changelist="2d8aedce-08f6-4d7f-af36-0491bc01d575" time="1363276653479" ignored="false" />
-    <file path="/a.dummy" changelist="2d8aedce-08f6-4d7f-af36-0491bc01d575" time="1363276673785" ignored="false" />
+    <file path="/a.dummy" changelist="2d8aedce-08f6-4d7f-af36-0491bc01d575" time="1363283203363" ignored="false" />
     <file path="/Query.php" changelist="2d8aedce-08f6-4d7f-af36-0491bc01d575" time="1363281711583" ignored="false" />
     <file path="/PropertyFinder.php" changelist="2d8aedce-08f6-4d7f-af36-0491bc01d575" time="1363281022080" ignored="false" />
+    <file path="/footer.php" changelist="2d8aedce-08f6-4d7f-af36-0491bc01d575" time="1363283041635" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,71 +54,7 @@
     <favorites_list name="ben" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="property-results.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/wp-content/themes/diamond-residential-2013/property-results.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="54" column="45" selection-start="2057" selection-end="2057" vertical-scroll-proportion="-12.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Property.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/wp-content/plugins/property-finder/src/Property.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="38" column="45" selection-start="1212" selection-end="1212" vertical-scroll-proportion="-12.75">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Search.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/wp-content/plugins/property-finder/src/Search.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="71" column="0" selection-start="1946" selection-end="1946" vertical-scroll-proportion="-28.666666">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Query.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/wp-content/plugins/property-finder/src/Query.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="8" column="14" selection-start="129" selection-end="129" vertical-scroll-proportion="-5.7083335">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="property-search.php" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/wp-content/themes/diamond-residential-2013/property-search.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="175" column="44" selection-start="4992" selection-end="4992" vertical-scroll-proportion="0.9052632">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Parser.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/wp-content/plugins/property-finder/src/Parser.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="12" column="9" selection-start="162" selection-end="162" vertical-scroll-proportion="-9.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="PropertyFinder.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/wp-content/plugins/property-finder/src/PropertyFinder.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="36" column="22" selection-start="1230" selection-end="1230" vertical-scroll-proportion="-18.166666">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf />
   </component>
   <component name="FindManager">
     <FindUsagesManager>
@@ -150,22 +72,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/wp-content/themes/diamond-residential-2013/FusionTableQuery.php" />
-        <option value="$PROJECT_DIR$/wp-content/plugins/property-finder/src/SearchResult.php" />
-        <option value="$PROJECT_DIR$/wp-content/plugins/property-finder/src/FusionTableQuery.php" />
-        <option value="$PROJECT_DIR$/wp-content/themes/diamond-residential-2013/_/js/functions.js" />
-        <option value="$PROJECT_DIR$/wp-content/themes/diamond-residential-2013/functions.php" />
-        <option value="$PROJECT_DIR$/wp-content/themes/diamond-residential-2013/property.php" />
-        <option value="$PROJECT_DIR$/wp-content/plugins/property-finder/src/Letting.php" />
-        <option value="$PROJECT_DIR$/wp-content/themes/diamond-residential-2013/property-results.php" />
-        <option value="$PROJECT_DIR$/wp-content/plugins/property-finder/src/PropertySummary.php" />
-        <option value="$PROJECT_DIR$/wp-content/plugins/property-finder/src/Property.php" />
         <option value="$PROJECT_DIR$/wp-content/plugins/property-finder/src/PropertyFinder.php" />
         <option value="$PROJECT_DIR$/wp-content/plugins/property-finder/includes.php" />
         <option value="$PROJECT_DIR$/wp-content/plugins/property-finder/src/Parser.php" />
         <option value="$PROJECT_DIR$/wp-content/plugins/property-finder/src/Search.php" />
         <option value="$PROJECT_DIR$/wp-content/plugins/property-finder/src/Query.php" />
         <option value="$PROJECT_DIR$/wp-content/themes/diamond-residential-2013/property-search.php" />
+        <option value="$PROJECT_DIR$/wp-content/themes/diamond-residential-2013/page.php" />
+        <option value="$PROJECT_DIR$/wp-content/themes/diamond-residential-2013/index.php" />
+        <option value="$PROJECT_DIR$/wp-content/themes/diamond-residential-2013/footer.php" />
+        <option value="$PROJECT_DIR$/wp-content/plugins/property-finder/src/FusionTableQuery.php" />
+        <option value="$PROJECT_DIR$/wp-content/themes/diamond-residential-2013/functions.php" />
+        <option value="$PROJECT_DIR$/wp-content/themes/diamond-residential-2013/header.php" />
+        <option value="$PROJECT_DIR$/wp-content/themes/diamond-residential-2013/style.css" />
+        <option value="$PROJECT_DIR$/wp-content/themes/diamond-residential-2013/property-results.php" />
+        <option value="$PROJECT_DIR$/wp-content/themes/diamond-residential-2013/_/js/functions.js" />
+        <option value="$PROJECT_DIR$/wp-content/themes/diamond-residential-2013/property.php" />
       </list>
     </option>
   </component>
@@ -180,6 +102,28 @@
     <option name="y" value="24" />
     <option name="width" value="1282" />
     <option name="height" value="977" />
+  </component>
+  <component name="ProjectInspectionProfilesVisibleTreeState">
+    <entry key="Project Default">
+      <profile-state>
+        <expanded-state>
+          <State>
+            <id />
+          </State>
+          <State>
+            <id>General</id>
+          </State>
+          <State>
+            <id>JavaScript</id>
+          </State>
+        </expanded-state>
+        <selected-state>
+          <State>
+            <id>JavaScript</id>
+          </State>
+        </selected-state>
+      </profile-state>
+    </entry>
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
@@ -207,6 +151,7 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -349,36 +294,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="themes" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="diamond-residential-2013" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="_" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="img" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ben" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="diamond" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="wp-content" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="plugins" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -433,19 +348,18 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="options.lastSelected" value="editor.preferences.appearance" />
     <property name="recentsLimit" value="5" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="options.lastSelected" value="reference.settingsdialog.IDE.editor.colors.JavaScript" />
     <property name="restartRequiresConfirmation" value="true" />
-    <property name="GoToClass.includeJavaFiles" value="false" />
-    <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="options.searchVisible" value="true" />
+    <property name="options.splitter.details.proportions" value="0.2965186" />
+    <property name="GoToClass.includeJavaFiles" value="false" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -465,10 +379,10 @@
     <configuration default="true" type="PhpBuiltInWebServerConfigurationType" factoryName="PHP Built-in Web Server" document_root="$PROJECT_DIR$" port="88" router_script="$PROJECT_DIR$/index.php" use_router_script="true">
       <method />
     </configuration>
-    <configuration default="true" type="PhpHttpRequestRunConfigurationType" factoryName="PHP HTTP Request">
+    <configuration default="true" type="PhpRemoteDebugRunConfigurationType" factoryName="PHP Remote Debug" server_name="Unnamed">
       <method />
     </configuration>
-    <configuration default="true" type="PhpRemoteDebugRunConfigurationType" factoryName="PHP Remote Debug" server_name="Unnamed">
+    <configuration default="true" type="PhpHttpRequestRunConfigurationType" factoryName="PHP HTTP Request">
       <method />
     </configuration>
     <configuration default="true" type="PhpLocalRunConfigurationType" factoryName="PHP Console">
@@ -504,13 +418,13 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-1" y="24" width="1282" height="977" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2795786" sideWeight="0.67045456" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2917342" sideWeight="0.6714801" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -519,7 +433,7 @@
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32954547" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32851985" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -586,107 +500,106 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/wp-content/plugins/property-finder/src/ChromePHP.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/diamond-residential-2013/_/js/jquery.simplePagination.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="188" column="9" selection-start="4756" selection-end="4756" vertical-scroll-proportion="0.45454547">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/plugins/property-finder/src/SearchResult.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/diamond-residential-2013/functions.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="79" column="48" selection-start="2963" selection-end="2963" vertical-scroll-proportion="-17.25">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/diamond-residential-2013/property.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="8" selection-start="802" selection-end="802" vertical-scroll-proportion="-16.5">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/plugins/property-finder/vendor/autoload.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="0" selection-start="182" selection-end="182" vertical-scroll-proportion="0.16133162">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/diamond-residential-2013/property-results.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="54" column="45" selection-start="2057" selection-end="2057" vertical-scroll-proportion="-12.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/plugins/property-finder/includes.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="0" selection-start="297" selection-end="297" vertical-scroll-proportion="-4.5">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/plugins/property-finder/src/PropertyFinder.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="36" column="22" selection-start="1230" selection-end="1230" vertical-scroll-proportion="-18.166666">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/wp-content/plugins/property-finder/src/PropertySummary.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="33" selection-start="534" selection-end="534" vertical-scroll-proportion="-12.75">
+        <state line="17" column="33" selection-start="534" selection-end="534" vertical-scroll-proportion="-12.75" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/plugins/property-finder/src/Parser.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="9" selection-start="162" selection-end="162" vertical-scroll-proportion="-9.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/plugins/property-finder/src/Search.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="71" column="0" selection-start="1946" selection-end="1946" vertical-scroll-proportion="-28.666666" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/plugins/property-finder/src/Query.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="14" selection-start="129" selection-end="129" vertical-scroll-proportion="-5.7083335" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/diamond-residential-2013/property-search.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="156" column="17" selection-start="4379" selection-end="4379" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/diamond-residential-2013/page.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="40" column="22" selection-start="442" selection-end="442" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/diamond-residential-2013/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="46" column="0" selection-start="2113" selection-end="2225" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/diamond-residential-2013/footer.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="24" column="0" selection-start="480" selection-end="480" vertical-scroll-proportion="0.32348993">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/wp-content/plugins/property-finder/src/Property.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="38" column="45" selection-start="1212" selection-end="1212" vertical-scroll-proportion="-12.75">
+        <state line="54" column="0" selection-start="2082" selection-end="2082" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/plugins/property-finder/src/Parser.php">
+    <entry file="file://$PROJECT_DIR$/wp-content/plugins/property-finder/src/FusionTableQuery.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="9" selection-start="162" selection-end="162" vertical-scroll-proportion="-9.0">
+        <state line="39" column="44" selection-start="1044" selection-end="1044" vertical-scroll-proportion="0.7843389">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/plugins/property-finder/src/Search.php">
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/diamond-residential-2013/functions.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="71" column="0" selection-start="1946" selection-end="1946" vertical-scroll-proportion="-28.666666">
+        <state line="86" column="30" selection-start="3233" selection-end="3233" vertical-scroll-proportion="0.6710183">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/plugins/property-finder/src/Query.php">
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/diamond-residential-2013/header.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="14" selection-start="129" selection-end="129" vertical-scroll-proportion="-5.7083335">
+        <state line="81" column="4" selection-start="3922" selection-end="3989" vertical-scroll-proportion="-7.5">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/diamond-residential-2013/property-search.php">
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/diamond-residential-2013/style.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="175" column="44" selection-start="4992" selection-end="4992" vertical-scroll-proportion="0.9052632">
+        <state line="485" column="28" selection-start="18367" selection-end="18367" vertical-scroll-proportion="0.16202532">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/diamond-residential-2013/_/js/functions.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="158" column="0" selection-start="4665" selection-end="4665" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/diamond-residential-2013/property-results.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="116" column="5" selection-start="4376" selection-end="4442" vertical-scroll-proportion="-18.416666">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/diamond-residential-2013/property.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="132" column="12" selection-start="4524" selection-end="4524" vertical-scroll-proportion="0.154047">
           <folding />
         </state>
       </provider>

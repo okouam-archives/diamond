@@ -483,7 +483,7 @@ border-bottom-left-radius: 3px;
 
 /* == IMAGES == */
 
-img{ max-width:100%; }
+/* img{ max-width:100%; } */
 .img-right{ float:right; }
 .img-left{ float:left; }
 .img-center{display:block;margin-right:auto; margin-left:auto; }

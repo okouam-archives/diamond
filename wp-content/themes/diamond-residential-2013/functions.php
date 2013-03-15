@@ -34,7 +34,7 @@
     function getLatestBuyProperties() {
         $context = new Context(null, "E1D57034-6C07-44C4-A458-425CAE9D9247", 1322, uniqid(), -1, 2104);
         $finder = new PropertyFinder();
-        $query = new Query(new PriceRange(0, 1000000000), 0, SearchType::Sales, null, true);
+        $query = new Query(null, null, 0, SearchType::Sales, null, true, null);
         $results = $finder->search($context, $query, 1, 2);
         return $results->properties;
     }
@@ -42,7 +42,7 @@
     function getLatestRentProperties() {
         $context = new Context(null, "E1D57034-6C07-44C4-A458-425CAE9D9247", 1322, uniqid(), -1, 2104);
         $finder = new PropertyFinder();
-        $query = new Query(new PriceRange(0, 1000000000), 0, SearchType::Lettings, null, true);
+        $query = new Query(null, null, 0, SearchType::Lettings, null, true, null);
         $results = $finder->search($context, $query, 1, 2);
         return $results->properties;
     }
@@ -83,13 +83,13 @@
     }
 
     function find_surrounding_schools($property, &$schools) {
-        $fusionTablequery = new FusionTableQuery("AIzaSyBgYhtGiRjsDIb_jaQjM3ZQHHVWCK9uNDI");
-        $stmt = "SELECT latitude, longitude, EstablishmentName ";
-        $stmt .= "FROM 1nzc6Ismj8WlHLlgo5zNUgf4EV-4A5qzqu4kS2G4 ";
-        $stmt .= "ORDER BY ST_DISTANCE(latitude,LATLNG({$property->latitude},{$property->longitude})) LIMIT 20";
+        $fusionTablequery = new FusionTableQuery("AIzaSyAWgN9SyQVm44Xz3YNSNLqGQao7wYKJvcc");
+        $stmt = "SELECT lat, lng, EstablishmentName, TypeOfEstablishment ";
+        $stmt .= "FROM 1FJMmIwwlpTi_Rvhw4y8TSEe3n1pW0MIz9-8V8c4 ";
+        $stmt .= "ORDER BY ST_DISTANCE(lat,LATLNG({$property->latitude},{$property->longitude})) LIMIT 20";
         $data = $fusionTablequery->query($stmt);
         foreach($data->rows as $row) {
-            array_push($schools, new School($row[2], $row[0], $row[1]));
+            array_push($schools, new School($row[2], $row[0], $row[1], $row[3]));
         }
     }
 ?>

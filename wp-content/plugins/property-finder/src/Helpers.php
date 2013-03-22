@@ -3,7 +3,7 @@
 	class SearchType
 	{
 		const Sales = 1;
-		const Lettings = 4;
+		const Lettings = 3;
 	}
 
 ?>

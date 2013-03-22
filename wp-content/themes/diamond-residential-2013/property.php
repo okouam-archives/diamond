@@ -127,7 +127,8 @@
 		</ul>
 	</form>
 
-	<div id="property-map"  class="map"></div>
+	<div id="property-map"  class="map">
+	</div>
 
 	</div>
 			
@@ -148,15 +149,31 @@
                 var marker = new google.maps.Marker({
                     position: coordinates,
                     map: map,
+                    title: "property",
                     icon: "<?= bloginfo('template_directory') . "/_/img/marker-house.png" ?>"
                 });
+                var infowindow = new InfoBubble({
+                    shadowStyle: 1,
+                    padding: 0,
+                    backgroundColor: 'rgb(57,57,57)',
+                    borderRadius: 3,
+                    minHeight:80,
+                    minWidth: 200,
+                    maxHeight:80,
+                    maxWidth: 300,
+                    arrowSize: 10,
+                    borderWidth: 2,
+                    borderColor: '#2c2c2c',
+                    disableAutoPan: true,
+                    hideCloseButton: true,
+                    arrowPosition: 30,
+                    backgroundClassName: 'noise',
+                    arrowStyle: 2,
+                    content: ""
+                });
+                setupTubeOverlay(map);
+                setupSchoolsOverlay(map, <?= json_encode($schools) ?>, "<?= bloginfo('template_directory') . '/_/img/marker-schools.png' ?>", infowindow);
 
-                var schoolIcon = "<?= bloginfo('template_directory') . "/_/img/marker-schools.png" ?>";
-                var propertyIcon = "<?= bloginfo('template_directory') . "/_/img/marker-house.png"; ?>";
-                var schools = <?= json_encode($schools) ?>;
-
-                var infowindow = new google.maps.InfoWindow({content: ""});
-                setupOverlays(map, infowindow, schoolIcon, schools);
             })
         </script>
     <?php } ?>

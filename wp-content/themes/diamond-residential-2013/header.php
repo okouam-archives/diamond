@@ -11,11 +11,9 @@
 
 	<meta charset="<?php bloginfo('charset'); ?>">
 	
-	<!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame -->
-	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
     <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><![endif]-->
     <!--[if lt IE 9]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
 	<?php if (is_search()) { ?>
 	<meta name="robots" content="noindex, nofollow" /> 
 	<?php } ?>
@@ -84,8 +82,9 @@
 	<script src="<?php bloginfo('template_directory'); ?>/_/js/modernizr-1.7.min.js"></script>
 	<script type="text/javascript" src="//use.typekit.net/kpq6drv.js"></script>
 	<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
     <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?key=AIzaSyDY0kkJiTPVd2U7aTOAwhc9ySH6oHxOIYM&sensor=false"></script>
+    <script type="text/javascript" src="http://google-maps-utility-library-v3.googlecode.com/svn/trunk/infobubble/src/infobubble-compiled.js"></script>
     <script type="text/javascript" src="https://raw.github.com/okouam/jquery-bbq/master/jquery.ba-bbq.min.js"></script>
     <script type="text/javascript" src="<?php bloginfo('template_directory'); ?>/_/js/jquery.simplePagination.js"></script>
     <script type="text/javascript" src="<?php bloginfo('template_directory'); ?>/_/js/jquery.customSelect.min.js"></script>
@@ -99,7 +98,7 @@
 	
 </head>
 
-<body <?php body_class(); ?>>
+<body class="noise">
 	
 	
 
@@ -107,15 +106,20 @@
 			<section class="wrap top">
 				<div class="grid-5">
 				<h1 class="logo"><a href="<?php echo get_option('home'); ?>/"><img src="<?php bloginfo('template_directory'); ?>/_/img/logo.png" /></a></h1>
-				<a class="sml-btn btn grey-btn" href="#">Register with us</a> <a class="sml-btn btn grey-btn" href="#">Free Property Valuation</a>
 				</div>
 				
 				<div class="grid-4">
 				<ul class="contact-head">
 					<li><i class="sprite tel">Telephone:</i>020 7078 1110</li>
 					<li><i class="sprite add">Address:</i>1 Lanark Place, Little Venice, W9 1BT</li>
+					<li><i class="sprite eml">Email:</i><a href="mailto: info@diamondresidential.co.uk" title="Click here to email Diamond Residential">info@diamondresidential.co.uk</a></li>
 				</ul>
 				</div>
+				
+				<div class="grid-3 last">
+					<a class="sml-btn btn pink-btn" href="<?= get_option('home'); ?>/register-with-us/" title="Click here to register with Diamond Residential">Register with us</a> <a class="sml-btn btn pink-btn" href="<?= get_option('home'); ?>/free-property-valuation/" title="Click here for a free Property Valuation">Free Property Valuation</a>
+				</div>
+				
 			</section>
 
 		</header>

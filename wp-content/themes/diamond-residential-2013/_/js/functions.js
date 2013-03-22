@@ -19,6 +19,9 @@
         slideshow: false,
         sync: "#carousel"
       });
+      
+      
+      
     });
 })(jQuery);
 
@@ -55,6 +58,9 @@ function setupSchoolsOverlay(map, schools, icon, infowindow) {
         } else {
             for(var i = 0; i < markers.length; i++) {
                 markers[i].setMap(null);
+                infowindow.map = null;
+                infowindow.marker = null;
+                infowindow.close();
             }
         }
     });
@@ -107,13 +113,13 @@ function setupSorting(sorter) {
 }
 
 function openInfoWindow(infowindow, map, marker) {
-    infowindow.content = "<b>"
+    infowindow.content = "<div id='infowindow'><strong>"
         + marker.displayAddress
-        + "</b><br/>"
+        + "</strong><br/>"
         + marker.summary
         + "<br/><a href='"
         + "/index.php/property?id=" + marker.id
-        + "'>Details</a>";
+        + "'>Details</a></div>";
     infowindow.open(map, marker);
 }
 
@@ -147,10 +153,18 @@ function setupPagination(el, propertyCount, currentPage) {
 }
 
 function handlePageClick(pageNumber) {
-    var url = window.location.href;
-    window.location = $.param.querystring(url, {pos: pageNumber});
+    var search = window.location.search;
+    var pos = qs('pos');
+    if (pos) {
+        search = search.replace("pos=" + pos, "pos=" + pageNumber);
+    } else {
+        search = search + "&pos=" + pageNumber;
+    }
+    var url = window.location.href.substring(0, window.location.href.indexOf("?"));
+    window.location = url + search;
     return false;
 }
+
 
 function setupOverlays(map, infowindow, icon, schools) {
     setupTubeOverlay(map);
@@ -164,3 +178,5 @@ function displayProperties(map, properties, infowindow, icon) {
     }
     map.fitBounds(bounds);
 }
+
+

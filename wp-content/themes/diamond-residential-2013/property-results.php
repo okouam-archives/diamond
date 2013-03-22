@@ -33,8 +33,8 @@
             <h2>List View</h2>
             <form>
                 <ul class="nav form-fields clearfix">
+                <li class="filter"> <label for="filter-results">Filter Results:</label></li>
                     <li class="field-wrap filter">
-                        <label for="filter-results">Filter Results:</label>
                         <select name="filter-results" id="filter-results" class="select-box">
                             <option value="true">Highest Price</option>
                             <option value="false">Lowest Price</option>
@@ -63,11 +63,16 @@
 		<article class="grid-half last">
 		
             <h2>Map View</h2>
+            
+            
+ 
+            
+            
 
             <form>
-                <ul class="nav form-fields clearfix">
+                <ul class="nav form-fields schools-tube clearfix">
                     <li class="field-wrap">
-                        <label for="tube" class="inline-label">Tube stations</label>
+                        <label for="tube" class="inline-label"><i class="sprite tube">-</i> Tube lines</label>
                         <div class="switch">
                             <input id="tube-on" name="tube" value="on" type="radio" >
                             <label for="tube-on" onclick="">On</label>
@@ -77,7 +82,7 @@
                         </div>
                     </li>
                     <li class="field-wrap">
-                        <label for="schools" class="inline-label">Schools</label>
+                        <label for="schools" class="inline-label"><i class="sprite schools">-</i> Schools</label>
                         <div class="switch">
                             <input id="schools-on" name="schools" value="on" type="radio" >
                             <label for="schools-on" onclick="">On</label>
@@ -100,7 +105,7 @@
 <?php if ($results->propertyCount > 0) { ?>
 
 	<section class="wrap main">
-	    <div class="grid-12 last"><div id="paginator" style="margin-bottom: 20px"></div></div>
+	    <div class="grid-12 last"><div id="paginator" class="brand-font"></div></div>
 	</section>
 
     <script type="text/javascript">
@@ -114,22 +119,37 @@
             var propertyIcon = "<?= plugins_url('/assets/img/marker-house.png'); ?>";
             var schools = <?= json_encode($schools) ?>;
 
-            var infowindow = new google.maps.InfoWindow({content: ""});
+            var infowindow = new InfoBubble({
+              shadowStyle: 1,
+              padding: 0,
+              backgroundColor: 'rgb(57,57,57)',
+              borderRadius: 3,
+              minHeight:80,
+              minWidth: 200,
+              maxHeight:80,
+              maxWidth: 300,
+              arrowSize: 10,
+              borderWidth: 2,
+              borderColor: '#2c2c2c',
+              disableAutoPan: true,
+              hideCloseButton: true,
+              arrowPosition: 30,
+              backgroundClassName: 'noise',
+              arrowStyle: 2,
+                content: ""
+            });
             var map = createMap("results-map");
             displayProperties(map, properties, infowindow, propertyIcon);
             setupPagination($("#paginator"), propertyCount, currentPage);
             setupOverlays(map, infowindow, schoolIcon, schools);
             setupSorting($("#filter-results"));
+            
+            
        })
 
     </script>
 
-<style type="text/css">
-    #paginator {text-align: center}
-    #paginator .prev {float: left}
-    #paginator .next {float: right}
-    #paginator a, #paginator span {margin-left: 5px; margin-right: 5px}
-</style>
+
 
 <?php } ?>
 

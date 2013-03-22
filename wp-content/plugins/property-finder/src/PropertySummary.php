@@ -15,7 +15,7 @@
             $this->longitude = (string) $el["longitude"];
             $this->latitude = (string) $el["latitude"];
             if ($propertyType == SearchType::Lettings) {
-                $this->price = "£" . (number_format(round(((((double) $el["priceVal"]) * 12) / 52)))) . " pw";
+                $this->price = $el["price"] . " pw";
             } else {
                 $this->price = (string) $el["price"];
             }

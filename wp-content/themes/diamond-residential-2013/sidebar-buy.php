@@ -17,18 +17,7 @@
     <?php } ?>
   
   <section class="noise prop-feed">
-  <?php
-  
-      $context = new Context(null, "E1D57034-6C07-44C4-A458-425CAE9D9247", 1322, uniqid(), -1, 2104);
-      $finder = new PropertyFinder();
-  
-  ?>
- <?php
-
-            $query = new Query(new PriceRange(0, 1000000000), 0, SearchType::Sales, null, true);
-            $results = $finder->search($context, $query, 1, 2);
-            $properties = $results->properties;
-            ?>
+ <?php $properties = getLatestBuyProperties(); ?>
   	
   			
   				<h3>Featured properties for sale</h3>

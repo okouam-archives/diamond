@@ -34,11 +34,7 @@
 
             if (isset($params['buy-rent'])) {
                 if ($params['buy-rent'] == "buy") $buyOrRent = SearchType::Sales;
-                else {
-                    $buyOrRent = SearchType::Lettings;
-                    $minPrice = round(($minPrice * 52) / 12);
-                    $maxPrice = round(($maxPrice * 52) / 12);
-                }
+                else $buyOrRent = SearchType::Lettings;
             }
             else {
                 $buyOrRent = SearchType::Lettings;

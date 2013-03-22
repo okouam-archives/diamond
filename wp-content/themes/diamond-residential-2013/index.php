@@ -70,29 +70,26 @@
 	
 		<article class="grid-one-third">
 			<h2>Register as rental applicant</h2>
-			<p>Pellentesque habitant morbi tristique 
-			senectus et netus.
+			<p>Please below to Register for rentals
 			</p>
 			
-			<a class="sml-btn btn pink-btn" href="<?= get_option('home'); ?>/register-with-us/register-as-rental-applicant/" title="Register with us as a rental applicant">Register as rental applicant</a>
+			<a class="sml-btn btn pink-btn" href="<?= get_option('home'); ?>/register-with-us/" title="Register with us as a rental applicant">Register as rental applicant</a>
 		</article>
 		<article class="grid-one-third">
 			<h2>Register as sales applicant</h2>
 			
-			<p>Pellentesque habitant morbi tristique 
-			senectus et netus.
+			<p>Please below to Register for sales
 			</p>
 			
-			<a class="sml-btn btn pink-btn" href="<?= get_option('home'); ?>/register-with-us/register-as-sales-applicant/" title="Register with us as a sales applicant">Register as sales applicant</a>
+			<a class="sml-btn btn pink-btn" href="<?= get_option('home'); ?>/register-with-us/" title="Register with us as a sales applicant">Register as sales applicant</a>
 		</article>
 		<article class="grid-one-third last">
 			<h2>Free valuation for Landlord</h2>
 			
-			<p>Pellentesque habitant morbi tristique 
-			senectus et netus.
+			<p>Please below to Register for a free valuation
 			</p>
 			
-			<a class="sml-btn btn pink-btn" href="#">Free valuation</a>
+			<a class="sml-btn btn pink-btn" href="<?= get_option('home'); ?>/free-property-valuation/">Free valuation</a>
 		</article>
 	
 	</section>
